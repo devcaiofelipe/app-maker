@@ -1,28 +1,19 @@
 import App from './src/App.js';
+import Terminal from './src/Terminal.js';
 
-const app = new App('Comercial Express', 'comercialexpress', '#000000')
+
+const app = new App('Speed Motoboy JF', 'speedmotoboy', '#ccccff')
+app.renamePaths();
 app.setLogo();
 app.setPackagesName();
 app.setAppName();
-app.renamePath();
 app.setBanner();
 app.setGoogleServicesJson();
 app.setColor();
 
-/*
-import fs from 'fs';
+Terminal.gradlewClean();
+Terminal.assembleRelease();
 
-const file = fs.readFileSync(`./banner.png`);
-fs.writeFile(`./src/images/banner.png`, file, function (err) {
-    if (err) throw err;
-    console.log('It\'s saved!');
-});
-const buffer = fs.readFileSync('./banner.png', function (err, data) {
-    if (err) throw err;
-    return data
-    console.log(data);
-    fs.writeFile('./src/images/banner.png', data, function (err) {
-        if (err) throw err;
-        console.log('It\'s saved!');
-    });
-});*/
+app.getApk();
+
+Terminal.undoAll();
