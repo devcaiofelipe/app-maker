@@ -66,9 +66,13 @@ export default class App {
     };
 
     setAppName() {
+        const firstName = this.appName.replace(/"/g, '\\"');
+        const secondName = firstName.replace(/&/g, '&amp;');
+        const normalizedName = secondName.replace(/\|/g, '\\|');
+
         replace({
             regex: "nomeaplicativo",
-            replacement: this.appName,
+            replacement: normalizedName,
             paths: [
                 this.basePath + '/android/app/src/main/res/values/strings.xml',
                 this.basePath + '/src/core/utils.js'
