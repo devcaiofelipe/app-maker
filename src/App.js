@@ -3,15 +3,30 @@ import replace from 'replace';
 import Filehound from 'filehound';
 
 export default class App {
-    constructor(appName, carrierName, buttonColor) {
+    constructor(appName, carrierName, buttonColor, appType) {
         this.appName = appName;
         this.carrierName = carrierName;
         this.buttonColor = buttonColor;
-        this.basePath = '/home/caio/maisentregas/entregador'
+        this.appType = appType;
+        this.basePath = '/home/caio/maisentregas/entregador';
         this.oldPath = this.basePath + '/src/assets/images/nometransportadora';
-        this.newPath = this.basePath + `/src/assets/images/${carrierName}`
-        
-        console.log(`logo_${this.carrierName}.png`);
+        this.newPath = this.basePath + `/src/assets/images/${carrierName}`;
+    };
+
+    setAppType() {
+        const typeMap = {
+            'apk': '#apkkey ',
+            'bundle': '#bundlekey '
+        }
+        replace({
+            regex: typeMap[this.appType],
+            replacement: '',
+            paths: [
+                '/home/caio/maisentregas/entregador/android/gradle.properties'    
+            ],
+            recursive: true,
+            silent: true,
+        }); 
     };
     
     setLogo() {
@@ -88,14 +103,6 @@ export default class App {
             if (err) throw err;
             console.log('It\'s saved!');
         });
-
-        /*fs.renameSync(this.newPath, this.oldPath, function(err) {
-            if (err) {
-                console.log(err)
-            } else {
-                console.log("Successfully renamed the directory.")
-            };
-        });*/
     };
 
     setGoogleServicesJson() {
@@ -132,7 +139,35 @@ export default class App {
                 if (err) throw err;
                 console.log('It\'s saved!');
             });
-            console.log(arrayPath);
         });
+    };
+
+    getBundle() {
+        Filehound.create()
+        .ext('aab')
+        .paths("/home/caio/maisentregas/entregador/android/app/build/outputs/bundle/release")
+        .find((err, arrayPath) => {
+            if (err) return console.error("handle err", err);
+            const bundlePath = arrayPath[0];
+            const bundleBuffer = fs.readFileSync(bundlePath);
+            const fullPath = bundlePath.split('/');
+            const bundleName = fullPath[fullPath.length - 1];
+            fs.writeFileSync(`/home/caio/nodejs/bot/${bundleName}`, bundleBuffer, function (err) {
+                if (err) throw err;
+                console.log('It\'s saved!');
+            });
+        });
+    };
+
+    getOutput() {
+        const typeMap = {
+            'apk': this.getApk,
+            'bundle': this.getBundle,
+        };
+        typeMap[this.appType]();
+    };
+
+    get getAppType() {
+        return this.appType;
     };
 };
