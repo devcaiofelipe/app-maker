@@ -14,6 +14,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "filehound": "^1.17.5",
+    "multer": "^1.4.3",
     "nodemon": "^2.0.13",
     "replace": "^1.2.1"
   }

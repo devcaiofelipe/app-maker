@@ -1,6 +1,7 @@
 import fs from 'fs';
 import replace from 'replace';
 import Filehound from 'filehound';
+import { recFindByExt } from './utils.js';
 
 export default class App {
     constructor(appName, carrierName, buttonColor, appType) {
@@ -11,9 +12,11 @@ export default class App {
         this.basePath = '/home/caio/maisentregas/entregador';
         this.oldPath = this.basePath + '/src/assets/images/nometransportadora';
         this.newPath = this.basePath + `/src/assets/images/${carrierName}`;
+        this.generatedAppName = null;
+        this.generatedAppPath = null;
     };
 
-    setAppType() {
+    setSignatureKey() {
         const typeMap = {
             'apk': '#apkkey ',
             'bundle': '#bundlekey '
@@ -130,7 +133,7 @@ export default class App {
     };
 
     getApk() {
-        Filehound.create()
+        /*Filehound.create()
         .ext('apk')
         .paths("/home/caio/maisentregas/entregador/android/app/build/outputs/apk/release")
         .find((err, arrayPath) => {
@@ -139,10 +142,26 @@ export default class App {
             const apkBuffer = fs.readFileSync(apkPath);
             const fullPath = apkPath.split('/');
             const apkName = fullPath[fullPath.length - 1];
-            fs.writeFileSync(`/home/caio/nodejs/bot/${apkName}`, apkBuffer, function (err) {
+            const outPutPath = `/home/caio/nodejs/bot/${apkName}`;
+            fs.writeFileSync(outPutPath, apkBuffer, function (err) {
                 if (err) throw err;
                 console.log('It\'s saved!');
             });
+            
+        });*/
+
+        const fileList = recFindByExt('/home/caio/maisentregas/entregador/android/app/build/outputs/apk/release', 'apk');
+        console.log('XXXXXXXXXXXXXXXXXXXX')
+        console.log(fileList);
+        console.log('XXXXXXXXXXXXXXXXXXXX')
+        const apkPath = fileList[0];
+        const apkBuffer = fs.readFileSync(apkPath);
+        const fullPath = apkPath.split('/');
+        const apkName = fullPath[fullPath.length - 1];
+        const outPutPath = `/home/caio/nodejs/bot/${apkName}`;
+        fs.writeFileSync(outPutPath, apkBuffer, function (err) {
+            if (err) throw err;
+            console.log('It\'s saved!');
         });
     };
 
@@ -156,7 +175,10 @@ export default class App {
             const bundleBuffer = fs.readFileSync(bundlePath);
             const fullPath = bundlePath.split('/');
             const bundleName = fullPath[fullPath.length - 1];
-            fs.writeFileSync(`/home/caio/nodejs/bot/${bundleName}`, bundleBuffer, function (err) {
+            const outPutPath = `/home/caio/nodejs/bot/${bundleName}`;
+            this.generatedAppPath = outPutPath;
+            this.generatedAppName = bundleName;
+            fs.writeFileSync(outPutPath, bundleBuffer, function (err) {
                 if (err) throw err;
                 console.log('It\'s saved!');
             });
@@ -174,4 +196,12 @@ export default class App {
     get getAppType() {
         return this.appType;
     };
+
+    get outPutPath() {
+        return this.generatedAppPath;
+    };
+
+    get outPutName() {
+        return this.generatedAppName;
+    }
 };
