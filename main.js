@@ -66,7 +66,7 @@ server.listen(3000, () => {
 });*/
 
 
-const app = new App('Papas', 'papas', '#8b51fe', 'apk')
+const app = new App('Papas', 'papas', '#8b51fe', 'bundle')
     try {
         Terminal.undoAll();
         setTimeout(function(){ console.log('Esperando desfazer as alterações'); }, 10000);
@@ -84,7 +84,7 @@ const app = new App('Papas', 'papas', '#8b51fe', 'apk')
         setTimeout(function(){ console.log('Esperando desfazer as alterações'); }, 10000);
         const filePath = app.outPutPath; //caminho do arquivo completo
         const fileName = app.outPutName; 
-        console.log('APP NAME:', fileName)// O nome padrão que o browser vai usar pra fazer download
+        console.log('APP NAME:', fileName)// O nome padrão que o brow
         console.log('APP PATH:', filePath)// O nome padrão que o browser vai usar pra fazer download
         //res.download(filePath, fileName)
     }catch(e) {

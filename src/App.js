@@ -12,8 +12,8 @@ export default class App {
         this.basePath = '/home/caio/maisentregas/entregador';
         this.oldPath = this.basePath + '/src/assets/images/nometransportadora';
         this.newPath = this.basePath + `/src/assets/images/${carrierName}`;
-        this.generatedAppName = null;
-        this.generatedAppPath = null;
+        this.generatedFileName = null;
+        this.generatedFilePath = null;
     };
 
     setSignatureKey() {
@@ -131,66 +131,27 @@ export default class App {
             silent: false,
         });
     };
-
-    getApk() {
-        /*Filehound.create()
-        .ext('apk')
-        .paths("/home/caio/maisentregas/entregador/android/app/build/outputs/apk/release")
-        .find((err, arrayPath) => {
-            if (err) return console.error("handle err", err);
-            const apkPath = arrayPath[0];
-            const apkBuffer = fs.readFileSync(apkPath);
-            const fullPath = apkPath.split('/');
-            const apkName = fullPath[fullPath.length - 1];
-            const outPutPath = `/home/caio/nodejs/bot/${apkName}`;
-            fs.writeFileSync(outPutPath, apkBuffer, function (err) {
-                if (err) throw err;
-                console.log('It\'s saved!');
-            });
-            
-        });*/
-
-        const fileList = recFindByExt('/home/caio/maisentregas/entregador/android/app/build/outputs/apk/release', 'apk');
+    
+    getOutput() {
+        const extensionMap = {
+            'apk': 'apk',
+            'bundle': 'aab',
+        };
+        const fileList = recFindByExt(`/home/caio/maisentregas/entregador/android/app/build/outputs/${this.appType}/release`, extensionMap[this.appType]);
         console.log('XXXXXXXXXXXXXXXXXXXX')
         console.log(fileList);
         console.log('XXXXXXXXXXXXXXXXXXXX')
-        const apkPath = fileList[0];
-        const apkBuffer = fs.readFileSync(apkPath);
-        const fullPath = apkPath.split('/');
-        const apkName = fullPath[fullPath.length - 1];
-        const outPutPath = `/home/caio/nodejs/bot/${apkName}`;
-        fs.writeFileSync(outPutPath, apkBuffer, function (err) {
+        const filePath = fileList[0];
+        const fileBuffer = fs.readFileSync(filePath);
+        const fullPath = filePath.split('/');
+        const fileName = fullPath[fullPath.length - 1];
+        const outPutPath = `/home/caio/nodejs/bot/${fileName}`;
+        fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
         });
-    };
-
-    getBundle() {
-        Filehound.create()
-        .ext('aab')
-        .paths("/home/caio/maisentregas/entregador/android/app/build/outputs/bundle/release")
-        .find((err, arrayPath) => {
-            if (err) return console.error("handle err", err);
-            const bundlePath = arrayPath[0];
-            const bundleBuffer = fs.readFileSync(bundlePath);
-            const fullPath = bundlePath.split('/');
-            const bundleName = fullPath[fullPath.length - 1];
-            const outPutPath = `/home/caio/nodejs/bot/${bundleName}`;
-            this.generatedAppPath = outPutPath;
-            this.generatedAppName = bundleName;
-            fs.writeFileSync(outPutPath, bundleBuffer, function (err) {
-                if (err) throw err;
-                console.log('It\'s saved!');
-            });
-        });
-    };
-
-    getOutput() {
-        const typeMap = {
-            'apk': this.getApk,
-            'bundle': this.getBundle,
-        };
-        typeMap[this.appType]();
+        this.generatedFilePath = filePath;
+        this.generatedFileName = fileName;
     };
 
     get getAppType() {
@@ -198,10 +159,10 @@ export default class App {
     };
 
     get outPutPath() {
-        return this.generatedAppPath;
+        return this.generatedFilePath;
     };
 
     get outPutName() {
-        return this.generatedAppName;
+        return this.generatedFileName;
     }
 };
