@@ -66,8 +66,9 @@ server.listen(3000, () => {
 });*/
 
 
-const app = new App('Papas', 'papas', '#8b51fe', 'bundle')
+const app = new App('Papas', 'papas', '#8b51fe', 'apk')
     try {
+        Terminal.setBasePath();
         Terminal.undoAll();
         setTimeout(function(){ console.log('Esperando desfazer as alterações'); }, 10000);
         app.renamePaths();

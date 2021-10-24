@@ -1,6 +1,5 @@
 import fs from 'fs';
 import replace from 'replace';
-import Filehound from 'filehound';
 import { recFindByExt } from './utils.js';
 
 export default class App {
@@ -9,9 +8,9 @@ export default class App {
         this.carrierName = carrierName;
         this.buttonColor = buttonColor;
         this.appType = appType;
-        this.basePath = '/home/caio/maisentregas/entregador';
-        this.oldPath = this.basePath + '/src/assets/images/nometransportadora';
-        this.newPath = this.basePath + `/src/assets/images/${carrierName}`;
+        this.basePath = process.cwd();
+        this.oldPath = this.basePath + '/entregador/src/assets/images/nometransportadora';
+        this.newPath = this.basePath + `/entregador/src/assets/images/${carrierName}`;
         this.generatedFileName = null;
         this.generatedFilePath = null;
     };
@@ -25,7 +24,7 @@ export default class App {
             regex: typeMap[this.appType],
             replacement: '',
             paths: [
-                '/home/caio/maisentregas/entregador/android/gradle.properties'    
+                this.basePath + '/entregador/android/gradle.properties'    
             ],
             recursive: true,
             silent: true,
@@ -34,16 +33,16 @@ export default class App {
     
     setLogo() {
         const paths = [
-            this.basePath + `/android/app/src/main/res/drawable/logo_${this.carrierName}.png`,
-            this.basePath + `/android/app/src/main/res/mipmap-hdpi/logo_${this.carrierName}.png`,
-            this.basePath + `/android/app/src/main/res/mipmap-mdpi/logo_${this.carrierName}.png`,
-            this.basePath + `/android/app/src/main/res/mipmap-xhdpi/logo_${this.carrierName}.png`,
-            this.basePath + `/android/app/src/main/res/mipmap-xxhdpi/logo_${this.carrierName}.png`,
-            this.basePath + `/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.carrierName}.png`
+            this.basePath + `/entregador/android/app/src/main/res/drawable/logo_${this.carrierName}.png`,
+            this.basePath + `/entregador/android/app/src/main/res/mipmap-hdpi/logo_${this.carrierName}.png`,
+            this.basePath + `/entregador/android/app/src/main/res/mipmap-mdpi/logo_${this.carrierName}.png`,
+            this.basePath + `/entregador/android/app/src/main/res/mipmap-xhdpi/logo_${this.carrierName}.png`,
+            this.basePath + `/entregador/android/app/src/main/res/mipmap-xxhdpi/logo_${this.carrierName}.png`,
+            this.basePath + `/entregador/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.carrierName}.png`
 
         ];
         for(const path of paths) {
-            const fileBuffer = fs.readFileSync(`/home/caio/nodejs/bot/logo_${this.carrierName}.png`);
+            const fileBuffer = fs.readFileSync(`${this.basePath}/logo_${this.carrierName}.png`);
             fs.writeFileSync(path, fileBuffer, function (err) {
                 if (err) throw err;
                 console.log('It\'s saved!');
@@ -56,11 +55,11 @@ export default class App {
             regex: 'nometransportadora',
             replacement: this.carrierName,
             paths: [
-                this.basePath + `/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}/MainActivity.java`,
-                this.basePath + `/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}/MainApplication.java`,
-                this.basePath + '/android/app/src/main/AndroidManifest.xml',
-                this.basePath + '/android/gradle.properties',
-                this.basePath + '/src/core/utils.js',
+                this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}/MainActivity.java`,
+                this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}/MainApplication.java`,
+                this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml',
+                this.basePath + '/entregador/android/gradle.properties',
+                this.basePath + '/entregador/src/core/utils.js',
         
             ],
             recursive: false,
@@ -77,8 +76,8 @@ export default class App {
             regex: "nomeaplicativo",
             replacement: normalizedName,
             paths: [
-                this.basePath + '/android/app/src/main/res/values/strings.xml',
-                this.basePath + '/src/core/utils.js'
+                this.basePath + '/entregador/android/app/src/main/res/values/strings.xml',
+                this.basePath + '/entregador/src/core/utils.js'
                 
             ],
             recursive: false,
@@ -87,6 +86,7 @@ export default class App {
     };
 
     renamePaths() {
+        console.log(this.basePath);
         fs.renameSync(this.oldPath, this.newPath, function(err) {
             if (err) {
                 console.log(err)
@@ -95,7 +95,7 @@ export default class App {
             };
         });
 
-        fs.renameSync(this.basePath + '/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora', this.basePath + `/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}`, function(err) {
+        fs.renameSync(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora', this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.carrierName}`, function(err) {
             if (err) {
                 console.log(err)
             } else {
@@ -105,16 +105,16 @@ export default class App {
     };
 
     setBanner() {
-        const bannerBuffer = fs.readFileSync('/home/caio/nodejs/bot/banner.png');
-        fs.writeFileSync(this.basePath + `/src/assets/images/${this.carrierName}/banner.png`, bannerBuffer, function (err) {
+        const bannerBuffer = fs.readFileSync(`${this.basePath}/banner.png`);
+        fs.writeFileSync(this.basePath + `/entregador/src/assets/images/${this.carrierName}/banner.png`, bannerBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
         });
     };
 
     setGoogleServicesJson() {
-        const gsBuffer = fs.readFileSync('/home/caio/nodejs/bot/google-services.json');
-        fs.writeFileSync(this.basePath + `/android/app/google-services.json`, gsBuffer, function (err) {
+        const gsBuffer = fs.readFileSync(`${this.basePath}/google-services.json`);
+        fs.writeFileSync(this.basePath + `/entregador/android/app/google-services.json`, gsBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
         });
@@ -125,19 +125,19 @@ export default class App {
             regex: "coraplicativo",
             replacement: this.buttonColor,
             paths: [
-                this.basePath + '/src/core/utils.js',  
+                this.basePath + '/entregador/src/core/utils.js',  
             ],
             recursive: false,
             silent: false,
         });
     };
-    
+
     getOutput() {
         const extensionMap = {
             'apk': 'apk',
             'bundle': 'aab',
         };
-        const fileList = recFindByExt(`/home/caio/maisentregas/entregador/android/app/build/outputs/${this.appType}/release`, extensionMap[this.appType]);
+        const fileList = recFindByExt(`${this.basePath}/entregador/android/app/build/outputs/${this.appType}/release`, extensionMap[this.appType]);
         console.log('XXXXXXXXXXXXXXXXXXXX')
         console.log(fileList);
         console.log('XXXXXXXXXXXXXXXXXXXX')
@@ -145,7 +145,7 @@ export default class App {
         const fileBuffer = fs.readFileSync(filePath);
         const fullPath = filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
-        const outPutPath = `/home/caio/nodejs/bot/${fileName}`;
+        const outPutPath = `${this.basePath}/${fileName}`;
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
