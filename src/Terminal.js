@@ -2,14 +2,14 @@ import { execSync } from 'child_process';
 
 
 export default class Terminal {
-    static setBasePath() {
-        this.basePath = process.cwd();
-    };
     static gradlewClean() {
-        execSync(`./gradlew clean`, { cwd: `${this.basePath}/entregador/android`}, (error, stdout, stderr) => {
+        execSync(`./gradlew clean`, { cwd: `${process.cwd()}/entregador/android`}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
+            }
+            if (stdout) {
+                console.log(`stdout: ${stdout}`);
             }
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
@@ -23,7 +23,7 @@ export default class Terminal {
             'bundle': './gradlew bundleRelease'
         };
         const commandToRun = typeMap[appType];
-        execSync(commandToRun, { cwd: `${this.basePath}/entregador/android`}, (error, stdout, stderr) => {
+        execSync(commandToRun, { cwd: `${process.cwd()}/entregador/android`}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
@@ -31,14 +31,20 @@ export default class Terminal {
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
             }
+            if (stdout) {
+                console.log(`stdout: ${stdout}`);
+            }
         });
     };
 
     static undoAll() {
-        execSync(`git checkout -- . && git clean -fd`, { cwd: `${this.basePath}/entregador`}, (error, stdout, stderr) => {
+        execSync(`git checkout -- . && git clean -fd`, { cwd: `${process.cwd()}/entregador`}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
+            }
+            if (stdout) {
+                console.log(`stdout: ${stdout}`);
             }
             if (stderr) {
                 console.log(`stderr: ${stderr}`);

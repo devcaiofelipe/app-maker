@@ -19,3 +19,12 @@ export function recFindByExt(base,ext,files,result) {
     })
     return result
 }
+
+export function removeFiles(files) {
+    for(const filePath of files) {
+        fs.unlinkSync(filePath, function(err){
+            if(err) return console.log(err);
+            console.log('file deleted successfully');
+       });
+    };
+};

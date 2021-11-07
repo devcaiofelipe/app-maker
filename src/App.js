@@ -86,7 +86,6 @@ export default class App {
     };
 
     renamePaths() {
-        console.log(this.basePath);
         fs.renameSync(this.oldPath, this.newPath, function(err) {
             if (err) {
                 console.log(err)
@@ -114,6 +113,7 @@ export default class App {
 
     setGoogleServicesJson() {
         const gsBuffer = fs.readFileSync(`${this.basePath}/google-services.json`);
+        
         fs.writeFileSync(this.basePath + `/entregador/android/app/google-services.json`, gsBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
@@ -138,9 +138,6 @@ export default class App {
             'bundle': 'aab',
         };
         const fileList = recFindByExt(`${this.basePath}/entregador/android/app/build/outputs/${this.appType}/release`, extensionMap[this.appType]);
-        console.log('XXXXXXXXXXXXXXXXXXXX')
-        console.log(fileList);
-        console.log('XXXXXXXXXXXXXXXXXXXX')
         const filePath = fileList[0];
         const fileBuffer = fs.readFileSync(filePath);
         const fullPath = filePath.split('/');
@@ -152,6 +149,7 @@ export default class App {
         });
         this.generatedFilePath = filePath;
         this.generatedFileName = fileName;
+        console.log('Finalizei o aplicativo agora');
     };
 
     get getAppType() {
