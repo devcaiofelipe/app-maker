@@ -1,6 +1,6 @@
 import fs from 'fs';
 import replace from 'replace';
-import { recFindByExt } from './utils.js';
+import { recFindByExt, normalizePath } from './utils.js';
 
 export default class App {
     constructor(appName, domain, buttonColor, appType) {
@@ -9,8 +9,9 @@ export default class App {
         this.buttonColor = buttonColor;
         this.appType = appType;
         this.basePath = process.cwd();
-        this.oldPath = this.basePath + '/entregador/src/assets/images/nometransportadora';
-        this.newPath = this.basePath + `/entregador/src/assets/images/${domain}`;
+        this.oldPath = normalizePath(this.basePath + '/entregador/src/assets/images/nometransportadora');
+        this.newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${domain}`);
+        this.isWindows = process.platform.includes('win');
     };
 
     setSignatureKey() {
@@ -22,7 +23,7 @@ export default class App {
             regex: typeMap[this.appType],
             replacement: '',
             paths: [
-                this.basePath + '/entregador/android/gradle.properties'    
+                normalizePath(this.basePath + '/entregador/android/gradle.properties')  
             ],
             recursive: true,
             silent: true,
@@ -31,13 +32,12 @@ export default class App {
     
     setLogo() {
         const paths = [
-            this.basePath + `/entregador/android/app/src/main/res/drawable/logo_${this.domain}.png`,
-            this.basePath + `/entregador/android/app/src/main/res/mipmap-hdpi/logo_${this.domain}.png`,
-            this.basePath + `/entregador/android/app/src/main/res/mipmap-mdpi/logo_${this.domain}.png`,
-            this.basePath + `/entregador/android/app/src/main/res/mipmap-xhdpi/logo_${this.domain}.png`,
-            this.basePath + `/entregador/android/app/src/main/res/mipmap-xxhdpi/logo_${this.domain}.png`,
-            this.basePath + `/entregador/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.domain}.png`
-
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/drawable/logo_${this.domain}.png`),
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-hdpi/logo_${this.domain}.png`),
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-mdpi/logo_${this.domain}.png`),
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xhdpi/logo_${this.domain}.png`),
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xxhdpi/logo_${this.domain}.png`),
+            normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.domain}.png`)
         ];
         for(const path of paths) {
             const fileBuffer = fs.readFileSync(`${this.basePath}/apps/${this.domain}/logo_${this.domain}.png`);
@@ -53,11 +53,11 @@ export default class App {
             regex: 'nometransportadora',
             replacement: this.domain,
             paths: [
-                this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainActivity.java`,
-                this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainApplication.java`,
-                this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml',
-                this.basePath + '/entregador/android/gradle.properties',
-                this.basePath + '/entregador/src/core/utils.js',
+                normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainActivity.java`),
+                normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainApplication.java`),
+                normalizePath(this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml'),
+                normalizePath(this.basePath + '/entregador/android/gradle.properties'),
+                normalizePath(this.basePath + '/entregador/src/core/utils.js'),
         
             ],
             recursive: false,
@@ -74,8 +74,8 @@ export default class App {
             regex: "nomeaplicativo",
             replacement: normalizedName,
             paths: [
-                this.basePath + '/entregador/android/app/src/main/res/values/strings.xml',
-                this.basePath + '/entregador/src/core/utils.js'
+                normalizePath(this.basePath + '/entregador/android/app/src/main/res/values/strings.xml'),
+                normalizePath(this.basePath + '/entregador/src/core/utils.js')
                 
             ],
             recursive: false,
@@ -91,8 +91,10 @@ export default class App {
                 console.log("Successfully renamed the directory.")
             };
         });
+        const oldPath = normalizePath(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora')
+        const newPath = normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}`);
 
-        fs.renameSync(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora', this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}`, function(err) {
+        fs.renameSync(oldPath, newPath, function(err) {
             if (err) {
                 console.log(err)
             } else {
@@ -102,17 +104,21 @@ export default class App {
     };
 
     setBanner() {
-        const bannerBuffer = fs.readFileSync(`${this.basePath}/apps/${this.domain}/banner.png`);
-        fs.writeFileSync(this.basePath + `/entregador/src/assets/images/${this.domain}/banner.png`, bannerBuffer, function (err) {
+        const bannerPath = normalizePath(`${this.basePath}/apps/${this.domain}/banner.png`);
+        const newBannerPath = normalizePath(this.basePath + `/entregador/src/assets/images/${this.domain}/banner.png`);
+        const bannerBuffer = fs.readFileSync(bannerPath);
+        fs.writeFileSync(newBannerPath, bannerBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
         });
     };
 
     setGoogleServicesJson() {
-        const gsBuffer = fs.readFileSync(`${this.basePath}/apps/${this.domain}/google-services.json`);
+        const gsPath = normalizePath(`${this.basePath}/apps/${this.domain}/google-services.json`);
+        const newgsPath = normalizePath(this.basePath + `/entregador/android/app/google-services.json`);
+        const gsBuffer = fs.readFileSync(gsPath);
         
-        fs.writeFileSync(this.basePath + `/entregador/android/app/google-services.json`, gsBuffer, function (err) {
+        fs.writeFileSync(newgsPath, gsBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
         });
@@ -123,7 +129,7 @@ export default class App {
             regex: "coraplicativo",
             replacement: this.buttonColor,
             paths: [
-                this.basePath + '/entregador/src/core/utils.js',  
+                normalizePath(this.basePath + '/entregador/src/core/utils.js'),  
             ],
             recursive: false,
             silent: false,
@@ -135,12 +141,13 @@ export default class App {
             'apk': 'apk',
             'bundle': 'aab',
         };
-        const fileList = recFindByExt(`${this.basePath}/entregador/android/app/build/outputs/${this.appType}/release`, extensionMap[this.appType]);
+        const pathToFind = normalizePath(`${this.basePath}/entregador/android/app/build/outputs/${this.appType}/release`);
+        const fileList = recFindByExt(pathToFind, extensionMap[this.appType]);
         const filePath = fileList[0];
         const fileBuffer = fs.readFileSync(filePath);
-        const fullPath = filePath.split('/');
+        const fullPath = this.isWindows ? filePath.split('\\') : filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
-        const outPutPath = `${this.basePath}/${fileName}`;
+        const outPutPath = normalizePath(`${this.basePath}/${fileName}`);
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
@@ -149,5 +156,16 @@ export default class App {
 
     get getAppType() {
         return this.appType;
+    };
+
+    makeApp() {
+        this.renamePaths();
+        this.setSignatureKey();
+        this.setLogo();
+        this.setPackagesName();
+        this.setAppName();
+        this.setBanner();
+        this.setGoogleServicesJson();
+        this.setColor();
     };
 };

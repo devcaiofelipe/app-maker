@@ -10,14 +10,7 @@ for(const app of appList) {
     try {
         const application = new App(app.appName, app.domain, app.color, app.appType);
         Terminal.undoAll();
-        application.renamePaths();
-        application.setSignatureKey();
-        application.setLogo();
-        application.setPackagesName();
-        application.setAppName();
-        application.setBanner();
-        application.setGoogleServicesJson();
-        application.setColor();
+        application.makeApp();
         Terminal.gradlewClean();
         Terminal.generateApp(application.getAppType);
         application.getOutput()
