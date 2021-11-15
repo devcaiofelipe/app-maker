@@ -8,17 +8,21 @@ for(const app of appList) {
         continue;
     };
     try {
-        const application = new App(app.appName, app.domain, app.color, app.appType);
+        console.log('<================================================>');
+        console.log(`Aplicativo ${app.appName} iniciado com sucesso, esse processo dura em média 5 minutos. Aguarde!`);
+        const application = new App(app.appName, app.domain, app.color, app.appType, app.packageName);
         Terminal.undoAll();
         application.makeApp();
         Terminal.gradlewClean();
         Terminal.generateApp(application.getAppType);
         application.getOutput()
         Terminal.undoAll();
+        console.log(`Aplicativo ${app.appName} finalizado com sucesso`);
+        console.log('<================================================>');
     }catch(err) {
-        console.log(err);
+        console.log('[ERROR]', err);
         Terminal.undoAll();
-        console.log('Finalizado');
+        
     }
 };
 

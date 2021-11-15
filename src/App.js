@@ -3,11 +3,12 @@ import replace from 'replace';
 import { recFindByExt, normalizePath } from './utils.js';
 
 export default class App {
-    constructor(appName, domain, buttonColor, appType) {
+    constructor(appName, domain, buttonColor, appType, packageName) {
         this.appName = appName;
         this.domain = domain;
         this.buttonColor = buttonColor;
         this.appType = appType;
+        this.packageName = packageName;
         this.basePath = process.cwd();
         this.oldPath = normalizePath(this.basePath + '/entregador/src/assets/images/nometransportadora');
         this.newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${domain}`);
@@ -31,6 +32,15 @@ export default class App {
     };
     
     setLogo() {
+        replace({
+            regex: 'nometransportadora',
+            replacement: this.domain,
+            paths: [
+                normalizePath(this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml'),
+            ],
+            recursive: false,
+            silent: false,
+        });
         const paths = [
             normalizePath(this.basePath + `/entregador/android/app/src/main/res/drawable/logo_${this.domain}.png`),
             normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-hdpi/logo_${this.domain}.png`),
@@ -50,15 +60,14 @@ export default class App {
 
     setPackagesName() {
         replace({
-            regex: 'nometransportadora',
-            replacement: this.domain,
+            regex: 'nomedopacote',
+            replacement: this.packageName,
             paths: [
                 normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainActivity.java`),
                 normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}/MainApplication.java`),
                 normalizePath(this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml'),
                 normalizePath(this.basePath + '/entregador/android/gradle.properties'),
                 normalizePath(this.basePath + '/entregador/src/core/utils.js'),
-        
             ],
             recursive: false,
             silent: false,
@@ -104,6 +113,15 @@ export default class App {
     };
 
     setBanner() {
+        replace({
+            regex: 'nometransportadora',
+            replacement: this.domain,
+            paths: [
+                normalizePath(this.basePath + '/entregador/src/core/utils.js')
+            ],
+            recursive: false,
+            silent: false,
+        });
         const bannerPath = normalizePath(`${this.basePath}/apps/${this.domain}/banner.png`);
         const newBannerPath = normalizePath(this.basePath + `/entregador/src/assets/images/${this.domain}/banner.png`);
         const bannerBuffer = fs.readFileSync(bannerPath);
@@ -147,7 +165,7 @@ export default class App {
         const fileBuffer = fs.readFileSync(filePath);
         const fullPath = this.isWindows ? filePath.split('\\') : filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
-        const outPutPath = normalizePath(`${this.basePath}/${fileName}`);
+        const outPutPath = normalizePath(`${this.basePath}/apps/${this.domain}/${fileName}`);
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
