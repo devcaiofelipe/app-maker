@@ -7,13 +7,13 @@ export default class Terminal {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
-            }
+            };
             if (stdout) {
                 console.log(`stdout: ${stdout}`);
-            }
+            };
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
-            }
+            };
         });
     };
 
@@ -27,13 +27,13 @@ export default class Terminal {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
-            }
+            };
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
-            }
+            };
             if (stdout) {
                 console.log(`stdout: ${stdout}`);
-            }
+            };
         });
     };
 
@@ -42,13 +42,13 @@ export default class Terminal {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
-            }
+            };
             if (stdout) {
                 console.log(`stdout: ${stdout}`);
-            }
+            };
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
-            }
+            };
         });
     };
-}
+};
