@@ -4,7 +4,7 @@ export const appList = [
         domain: 'papas',
         color: '#8b51fe',
         appType: 'apk',
-        readyToGenerate: true
+        readyToGenerate: false
     },
     {
         appName: 'Mastter Delivery - Entregador',

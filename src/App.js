@@ -11,15 +11,13 @@ export default class App {
         this.basePath = process.cwd();
         this.oldPath = this.basePath + '/entregador/src/assets/images/nometransportadora';
         this.newPath = this.basePath + `/entregador/src/assets/images/${domain}`;
-        this.generatedFileName = null;
-        this.generatedFilePath = null;
     };
 
     setSignatureKey() {
         const typeMap = {
             'apk': '#apkkey ',
             'bundle': '#bundlekey '
-        }
+        };
         replace({
             regex: typeMap[this.appType],
             replacement: '',
@@ -147,20 +145,9 @@ export default class App {
             if (err) throw err;
             console.log('It\'s saved!');
         });
-        this.generatedFilePath = filePath;
-        this.generatedFileName = fileName;
-        console.log('Finalizei o aplicativo agora');
     };
 
     get getAppType() {
         return this.appType;
     };
-
-    get outPutPath() {
-        return this.generatedFilePath;
-    };
-
-    get outPutName() {
-        return this.generatedFileName;
-    }
 };
