@@ -8,7 +8,6 @@ for(const app of appList) {
         continue;
     };
     try {
-        console.log('<================================================>');
         console.log(`Aplicativo ${app.appName} iniciado com sucesso, esse processo dura em média 5 minutos. Aguarde!`);
         const application = new App(app.appName, app.domain, app.color, app.appType, app.packageName);
         Terminal.undoAll();
@@ -18,11 +17,9 @@ for(const app of appList) {
         application.getOutput()
         Terminal.undoAll();
         console.log(`Aplicativo ${app.appName} finalizado com sucesso`);
-        console.log('<================================================>');
     }catch(err) {
         console.log('[ERROR]', err);
         Terminal.undoAll();
-        
-    }
+    };
 };
 
