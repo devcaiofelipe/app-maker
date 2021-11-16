@@ -5,7 +5,7 @@ export const appList = [
         color: '#8b51fe',
         appType: 'apk',
         packageName: 'papas',
-        readyToGenerate: false
+        readyToGenerate: true
     },
     {
         appName: 'Mastter Delivery - Entregador',
@@ -13,13 +13,13 @@ export const appList = [
         color: '#e2542e',
         appType: 'apk',
         packageName: 'mastterdelivery',
-        readyToGenerate: false
+        readyToGenerate: true
     },
     {
         appName: 'Speed Delivery - Entregador',
         domain: 'speedmotofrete',
         color: '#cb2725',
-        appType: 'apk',
+        appType: 'bundle',
         packageName: 'speedmotofrete',
         readyToGenerate: true
     }
