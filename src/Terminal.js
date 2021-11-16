@@ -1,9 +1,10 @@
 import { execSync } from 'child_process';
+import { botRootPath, normalizePath } from './utils.js';
 
 
 export default class Terminal {
     static gradlewClean() {
-        execSync(`./gradlew clean`, { cwd: `${process.cwd()}/entregador/android`}, (error, stdout, stderr) => {
+        execSync(`./gradlew clean`, { cwd: normalizePath(`${botRootPath()}/entregador/android`)}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
@@ -23,7 +24,7 @@ export default class Terminal {
             'bundle': './gradlew bundleRelease'
         };
         const commandToRun = typeMap[appType];
-        execSync(commandToRun, { cwd: `${process.cwd()}/entregador/android`}, (error, stdout, stderr) => {
+        execSync(commandToRun, { cwd: normalizePath(`${botRootPath()}/entregador/android`)}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return
@@ -38,7 +39,7 @@ export default class Terminal {
     };
 
     static undoAll() {
-        execSync(`git checkout -- . && git clean -fd`, { cwd: `${process.cwd()}/entregador`}, (error, stdout, stderr) => {
+        execSync(`git checkout -- . && git clean -fd`, { cwd: normalizePath(`${botRootPath()}/entregador`)}, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return

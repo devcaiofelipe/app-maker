@@ -27,3 +27,10 @@ export function normalizePath(path) {
     };
     return path;
 };
+
+export function botRootPath() {
+    const basePath = process.cwd();
+    const splitedBasePath = basePath.split('/');
+    splitedBasePath.splice(splitedBasePath.length - 1, 1)
+    return splitedBasePath.join('/'); 
+};

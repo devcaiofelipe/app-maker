@@ -1,12 +1,13 @@
 import App from './src/App.js';
 import Terminal from './src/Terminal.js';
 import { appList } from './app-list.js';
+import { botRootPath, normalizePath } from './src/utils.js'
 import fs from 'fs';
 
 
 for(const app of appList) {
-    const basePath = process.cwd();
-    const configPath = basePath + `/apps/${app}/config.json`;
+    const basePath = botRootPath();
+    const configPath = normalizePath(basePath + `/bot/apps/${app}/config.json`);
     const { appName, domain, color, appType, packageName }  = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
 
     try {

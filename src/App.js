@@ -1,6 +1,6 @@
 import fs from 'fs';
 import replace from 'replace';
-import { recFindByExt, normalizePath } from './utils.js';
+import { recFindByExt, normalizePath, botRootPath } from './utils.js';
 
 export default class App {
     constructor(appName, domain, buttonColor, appType, packageName) {
@@ -9,7 +9,7 @@ export default class App {
         this.buttonColor = buttonColor;
         this.appType = appType;
         this.packageName = packageName;
-        this.basePath = process.cwd();
+        this.basePath = botRootPath();
         this.oldPath = normalizePath(this.basePath + '/entregador/src/assets/images/nometransportadora');
         this.newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${domain}`);
         this.isWindows = process.platform.includes('win');
@@ -50,7 +50,7 @@ export default class App {
             normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.domain}.png`)
         ];
         for(const path of paths) {
-            const fileBuffer = fs.readFileSync(`${this.basePath}/apps/${this.domain}/logo_${this.domain}.png`);
+            const fileBuffer = fs.readFileSync(`${this.basePath}/bot/apps/${this.domain}/logo_${this.domain}.png`);
             fs.writeFileSync(path, fileBuffer, function (err) {
                 if (err) throw err;
                 console.log('It\'s saved!');
@@ -122,7 +122,7 @@ export default class App {
             recursive: false,
             silent: false,
         });
-        const bannerPath = normalizePath(`${this.basePath}/apps/${this.domain}/banner.png`);
+        const bannerPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/banner.png`);
         const newBannerPath = normalizePath(this.basePath + `/entregador/src/assets/images/${this.domain}/banner.png`);
         const bannerBuffer = fs.readFileSync(bannerPath);
         fs.writeFileSync(newBannerPath, bannerBuffer, function (err) {
@@ -132,7 +132,7 @@ export default class App {
     };
 
     setGoogleServicesJson() {
-        const gsPath = normalizePath(`${this.basePath}/apps/${this.domain}/google-services.json`);
+        const gsPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/google-services.json`);
         const newgsPath = normalizePath(this.basePath + `/entregador/android/app/google-services.json`);
         const gsBuffer = fs.readFileSync(gsPath);
         
@@ -165,7 +165,7 @@ export default class App {
         const fileBuffer = fs.readFileSync(filePath);
         const fullPath = this.isWindows ? filePath.split('\\') : filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
-        const outPutPath = normalizePath(`${this.basePath}/apps/${this.domain}/${fileName}`);
+        const outPutPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/${fileName}`);
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
