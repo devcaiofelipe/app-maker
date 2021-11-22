@@ -11,13 +11,16 @@ for (const app of appList) {
     const { domain, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
     const basePathOutput = `${basePath}/apps/${domain}`;
     const outputhMap = {
-        'apk': `${basePathOutput}/entregador-1.0.72-${packageName}.apk`,
-        'bundle': `${basePathOutput}/entregador-1.0.72-release.aab`
+        'apk': `${basePathOutput}/entregador-1.0.76-${packageName}.apk`,
+        'bundle': `${basePathOutput}/entregador-1.0.76-release.aab`
     };
-    console.log(outputhMap[appType]);
     const typeMap = {
         'apk': 'apkpath',
         'bundle': 'aabpath'
+    };
+    const laneMap = {
+        'apk': 'fastlane apk',
+        'bundle': 'fastlane aab'
     };
 
     replace({
@@ -40,7 +43,22 @@ for (const app of appList) {
         silent: false,
     });
 
-    execSync(`git checkout -- .`, { cwd: basePath }, (error, stdout, stderr) => {
+    const command = laneMap[appType];
+    console.log(command);
+    execSync(command, { cwd: basePath }, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return
+        };
+        if (stdout) {
+            console.log(`stdout: ${stdout}`);
+        };
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+        };
+    });
+
+    execSync(`git checkout -- Appfile && git checkout -- Fastfile`, { cwd: `${basePath}/fastlane` }, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return

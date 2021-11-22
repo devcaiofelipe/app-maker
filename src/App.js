@@ -166,6 +166,9 @@ export default class App {
         const fullPath = this.isWindows ? filePath.split('\\') : filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
         const outPutPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/${fileName}`);
+        console.log('XXXXXXXXXXXXXXXXXXXXX')
+        console.log(outPutPath);
+        console.log('XXXXXXXXXXXXXXXXXXXXX')
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
