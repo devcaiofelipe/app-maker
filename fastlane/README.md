@@ -15,9 +15,14 @@ Install _fastlane_ using
 or alternatively using `brew install fastlane`
 
 # Available Actions
-### beta
+### apks
 ```
-fastlane beta
+fastlane apks
+```
+
+### aab
+```
+fastlane aab
 ```
 
 

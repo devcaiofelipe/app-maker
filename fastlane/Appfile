@@ -6,4 +6,4 @@
 #     https://docs.fastlane.tools/advanced/#appfile
 
 json_key_file("/home/caio/dados-fastlane/pc-api-8735679847468094439-520-c6ac79fc360c.json")
-package_name("com.maisentregas.entregador.v2.maisentregas")
+package_name("com.maisentregas.entregador.v2.nomedopacote")

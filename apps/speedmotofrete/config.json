@@ -2,6 +2,6 @@
     "appName": "Speed Delivery - Entregador",
     "domain": "speedmotofrete",
     "color": "#cb2725",
-    "appType": "apk",
+    "appType": "bundle",
     "packageName": "speedmotofrete"
 }

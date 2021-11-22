@@ -23,20 +23,12 @@
 # end
 
 
-lane :apks do |options|
-    if options[:caio]
-        puts options[:caio]
-        puts "Hiiiiiiiiiii :)"
-    end
-    # upload_to_play_store(track: 'beta', aab: '/home/caio/dados-fastlane/entregador-1.0.74-release.aab')
+lane :apk do
+    upload_to_play_store(track: 'production', apk: 'apkpath')
     # upload_to_play_store(track: 'beta', apk_paths: '/home/caio/dados-fastlane/entregador-1.0.74-release.aab')
 end
 
-lane :aabs do |options|
-    if options[:caio]
-        puts options[:caio]
-        puts "Hiiiiiiiiiii :)"
-    end
+lane :aab do
     # upload_to_play_store(track: 'beta', aab: '/home/caio/dados-fastlane/entregador-1.0.74-release.aab')
-    upload_to_play_store(track: 'beta', aab_paths: '/home/caio/dados-fastlane/entregador-1.0.74-release.aab')
+    upload_to_play_store(track: 'production', aab: 'aabpath')
 end
