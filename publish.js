@@ -6,6 +6,18 @@ import { execSync } from 'child_process';
 
 
 for (const app of appList) {
+    execSync(`git checkout -- Appfile && git checkout -- Fastfile`, { cwd: `${basePath}/fastlane` }, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return
+        };
+        if (stdout) {
+            console.log(`stdout: ${stdout}`);
+        };
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+        };
+    });
     const basePath = process.cwd();
     const configPath = normalizePath(basePath + `/apps/${app}/config.json`);
     const { domain, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
