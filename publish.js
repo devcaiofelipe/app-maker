@@ -23,8 +23,8 @@ for (const app of appList) {
     const { domain, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
     const basePathOutput = `${basePath}/apps/${domain}`;
     const outputhMap = {
-        'apk': `${basePathOutput}/entregador-1.0.76-${packageName}.apk`,
-        'bundle': `${basePathOutput}/entregador-1.0.76-release.aab`
+        'apk': `${basePathOutput}/entregador-2.0.0-${packageName}.apk`,
+        'bundle': `${basePathOutput}/entregador-2.0.0-release.aab`
     };
     const typeMap = {
         'apk': 'apkpath',
