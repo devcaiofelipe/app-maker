@@ -44,4 +44,9 @@ export const appList = [
     'expressogrimm',
     'aclog',
     'vidaexpress',
+    'beltraoexpress',
+    'f5delivery',
+    'ramosserviceexpress',
+    'startentregas',
+    'vasto',
 ]
