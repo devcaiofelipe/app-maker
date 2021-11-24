@@ -17,4 +17,11 @@ export const appList = [
     'packman',
     'precisas',
     'primeexpresso',
+    'celereexpress',
+    'disktudo',
+    'famotoboys',
+    'maltalog',
+    'postarlog',
+    'speedmotoboy',
+    'sullogistica',
 ]
