@@ -49,4 +49,9 @@ export const appList = [
     'ramosserviceexpress',
     'startentregas',
     'vasto',
+    'levodelivery',
+    'logligeiro',
+    'mercadofeito',
+    'uniosentregas',
+    'zfdeliveryfast',
 ]
