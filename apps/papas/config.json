@@ -2,6 +2,6 @@
     "appName": "Papas - Entregador",
     "domain": "papas",
     "color": "#8b51fe",
-    "appType": "apk",
+    "appType": "bundle",
     "packageName": "papas"
 }

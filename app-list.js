@@ -2,6 +2,6 @@
 export const appList = [
     'comercialexpress',
     'mastterdelivery',
-    'papas',
-    'speedmotofrete',
+    // 'papas',
+    // 'speedmotofrete',
 ]
