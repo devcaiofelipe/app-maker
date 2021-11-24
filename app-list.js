@@ -6,7 +6,7 @@ export const appList = [
     'speedmotofrete',
     'boydry',
     'callboy',
-    'cobretudo',
+    'novacobretudo',
     'dobrasil',
     'entregasimediato',
     'flpsp',
