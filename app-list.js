@@ -60,4 +60,6 @@ export const appList = [
     'noizentrega',
     'racingexpress',
     'uniosfranca',
+    'fly',
+    'titanexpress',
 ]
