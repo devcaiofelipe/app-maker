@@ -39,4 +39,9 @@ export const appList = [
     'schnell',
     'selectdelivery',
     'surfsentregas',
+    'altalogexpress',
+    'eduardomotoboys',
+    'expressogrimm',
+    'aclog',
+    'vidaexpress',
 ]
