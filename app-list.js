@@ -54,4 +54,10 @@ export const appList = [
     'mercadofeito',
     'uniosentregas',
     'zfdeliveryfast',
+    'andrademotoexpress',
+    'beraldomotoboy',
+    'gtexpress',
+    'noizentrega',
+    'racingexpress',
+    'uniosfranca',
 ]
