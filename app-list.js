@@ -29,4 +29,9 @@ export const appList = [
     'pakot',
     'scriptport',
     'tomexpress',
+    'coperboy',
+    'dedexexpress',
+    'motoboybelem',
+    'suaentrega',
+    'tjlexpress',
 ]
