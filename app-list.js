@@ -24,4 +24,9 @@ export const appList = [
     'postarlog',
     'speedmotoboy',
     'sullogistica',
+    'direcaoexpress',
+    'kftransporte',
+    'pakot',
+    'scriptport',
+    'tomexpress',
 ]
