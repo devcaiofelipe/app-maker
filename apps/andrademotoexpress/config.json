@@ -1,7 +1,7 @@
 {
-  "appName": "Precisa definir o nome",
+  "appName": "Andrade Moto Express - Entregador",
   "domain": "andrademotoexpress",
-  "color": "#ec2c35",
+  "color": "#e22d38",
   "appType": "bundle",
-  "packageName": "precisa gerar o arquivo"
+  "packageName": "andrademotoexpress"
 }
