@@ -71,4 +71,9 @@ export const appList = [
     'papatempo',
     'pecexpress',
     'sharklogistica',
+    'araujoexpress',
+    'embuexpress',
+    'iceboys',
+    'logmoto',
+    'vipfast',
 ]
