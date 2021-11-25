@@ -62,7 +62,6 @@ export const appList = [
     'uniosfranca',
     'fly',
     'titanexpress',
-    'godoyexpress',
     'gp46express',
     'tbtexpress',
     'trbexpressrj',
