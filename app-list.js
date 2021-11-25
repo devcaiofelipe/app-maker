@@ -66,4 +66,9 @@ export const appList = [
     'gp46express',
     'tbtexpress',
     'trbexpressrj',
+    'dcomotoboy',
+    'mjmotoboy',
+    'papatempo',
+    'pecexpress',
+    'sharklogistica',
 ]
