@@ -9,7 +9,7 @@ export const appList = [
     'novacobretudo',
     'dobrasil',
     'entregasimediato',
-    //'flpsp', esta sem app no playconsole
+    'flpsp',
     'lijet',
     'mtlogg',
     'maualog',
@@ -62,7 +62,7 @@ export const appList = [
     'uniosfranca',
     'fly',
     'titanexpress',
-    //'godoyexpress', sem  app na playstore
+    'godoyexpress',
     'gp46express',
     'tbtexpress',
     'trbexpressrj',
