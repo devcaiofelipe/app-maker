@@ -81,4 +81,10 @@ export const appList = [
     'deliverymanausexpress',
     'diferencialmotoexpress',
     'rota66encomendas',
+    'bfstransportes',
+    'djexpress',
+    'g3logistica',
+    'hortoboy',
+    'pediaki',
+    'rapidyexpress',
 ]
