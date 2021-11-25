@@ -15,7 +15,6 @@ export const appList = [
     'maualog',
     'netboy',
     'packman',
-    'precisas',
     'primeexpresso',
     'celereexpress',
     'disktudo',
