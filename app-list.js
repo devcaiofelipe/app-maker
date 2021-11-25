@@ -85,6 +85,5 @@ export const appList = [
     'djexpress',
     'g3logistica',
     'hortoboy',
-    'pediaki',
     'rapidyexpress',
 ]
