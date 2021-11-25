@@ -27,7 +27,7 @@ export const appList = [
     'kftransporte',
     'pakot',
     'scriptport',
-    'tomexpress',
+    //'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO
     'coperboy',
     'dedexexpress',
     'motoboybelem',
