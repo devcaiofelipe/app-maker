@@ -76,4 +76,9 @@ export const appList = [
     'iceboys',
     'logmoto',
     'vipfast',
+    '2fexpress',
+    'bluedelivery',
+    'deliverymanausexpress',
+    'diferencialmotoexpress',
+    'rota66encomendas',
 ]
