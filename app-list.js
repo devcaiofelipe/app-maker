@@ -15,7 +15,6 @@ export const appList = [
     'maualog',
     'netboy',
     'packman',
-    'primeexpresso',
     'celereexpress',
     'disktudo',
     'famotoboys',
@@ -27,7 +26,7 @@ export const appList = [
     'kftransporte',
     'pakot',
     'scriptport',
-    //'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO
+    // 'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO
     'coperboy',
     'dedexexpress',
     'motoboybelem',
@@ -37,8 +36,9 @@ export const appList = [
     'leveelog',
     'schnell',
     'selectdelivery',
-    'surfsentregas',
+    // 'surfsentregas', VERIFICAR PQ DEU PROBLEMA
     'altalogexpress',
+    'dedexexpress',
     'eduardomotoboys',
     'expressogrimm',
     'aclog',
@@ -56,19 +56,18 @@ export const appList = [
     'andrademotoexpress',
     'beraldomotoboy',
     'gtexpress',
-    'noizentrega',
+    // 'noizentrega', sem info
     'racingexpress',
-    'uniosfranca',
     'fly',
     'titanexpress',
     'gp46express',
     'tbtexpress',
     'trbexpressrj',
     'dcomotoboy',
-    'mjmotoboy',
+    // 'mjmotoboy', sem info
     'papatempo',
-    'pecexpress',
-    'sharklogistica',
+    // 'pecexpress', sem info
+    // 'sharklogistica', sem info
     'araujoexpress',
     'embuexpress',
     'iceboys',
@@ -81,7 +80,7 @@ export const appList = [
     'rota66encomendas',
     'bfstransportes',
     'djexpress',
-    'g3logistica',
+    // 'g3logistica', sem info
     'hortoboy',
     'rapidyexpress',
 ]
