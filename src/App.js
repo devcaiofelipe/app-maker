@@ -77,15 +77,26 @@ export default class App {
     setAppName() {
         const firstName = this.appName.replace(/"/g, '\\"');
         const secondName = firstName.replace(/&/g, '&amp;');
-        const normalizedName = secondName.replace(/\|/g, '\\|');
+        const thirdName = secondName.replace(/'/g, "\\'");
+        const normalizedName = thirdName.replace(/\|/g, '\\|');
 
         replace({
             regex: "nomeaplicativo",
             replacement: normalizedName,
             paths: [
-                normalizePath(this.basePath + '/entregador/android/app/src/main/res/values/strings.xml'),
+                normalizePath(this.basePath + '/entregador/android/app/src/main/res/values/strings.xml'), 
+            ],
+            recursive: false,
+            silent: false,
+        });
+    };
+
+    setScreenMessage() {
+        replace({
+            regex: "nomeaplicativo",
+            replacement: this.appName,
+            paths: [
                 normalizePath(this.basePath + '/entregador/src/core/utils.js')
-                
             ],
             recursive: false,
             silent: false,
@@ -182,6 +193,7 @@ export default class App {
         this.setLogo();
         this.setPackagesName();
         this.setAppName();
+        this.setScreenMessage();
         this.setBanner();
         this.setGoogleServicesJson();
         this.setColor();

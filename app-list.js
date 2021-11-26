@@ -36,7 +36,7 @@ export const appList = [
     'leveelog',
     'schnell',
     'selectdelivery',
-    // 'surfsentregas', VERIFICAR PQ DEU PROBLEMA
+    'surfsentregas',
     'altalogexpress',
     'dedexexpress',
     'eduardomotoboys',
