@@ -9,7 +9,6 @@ export const appList = [
     'novacobretudo',
     'dobrasil',
     'entregasimediato',
-    'flpsp',
     'lijet',
     'mtlogg',
     'maualog',
@@ -26,7 +25,6 @@ export const appList = [
     'kftransporte',
     'pakot',
     'scriptport',
-    // 'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO
     'coperboy',
     'dedexexpress',
     'motoboybelem',
@@ -53,10 +51,8 @@ export const appList = [
     'mercadofeito',
     'uniosentregas',
     'zfdeliveryfast',
-    'andrademotoexpress',
     'beraldomotoboy',
     'gtexpress',
-    // 'noizentrega', sem info
     'racingexpress',
     'fly',
     'titanexpress',
@@ -64,10 +60,7 @@ export const appList = [
     'tbtexpress',
     'trbexpressrj',
     'dcomotoboy',
-    // 'mjmotoboy', sem info
     'papatempo',
-    // 'pecexpress', sem info
-    // 'sharklogistica', sem info
     'araujoexpress',
     'embuexpress',
     'iceboys',
@@ -78,9 +71,16 @@ export const appList = [
     'deliverymanausexpress',
     'diferencialmotoexpress',
     'rota66encomendas',
-    'bfstransportes',
     'djexpress',
-    // 'g3logistica', sem info
     'hortoboy',
     'rapidyexpress',
-]
+    // 'g3logistica', sem info, nao pode publicar na loja
+    // 'bfstransportes', nao pode publicar na loja
+    // 'pecexpress', sem info, nao pode publicar na loja
+    // 'sharklogistica', sem info, nao pode publicar na loja
+    // 'mjmotoboy', sem info, nao pode publicar na loja
+    // 'noizentrega', sem info, nao pode publicar na loja
+    // 'andrademotoexpress', nao pode publicar na loja
+    // 'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO, nao pode publicar na loja
+    // 'flpsp', nao pode publicar na loja
+];

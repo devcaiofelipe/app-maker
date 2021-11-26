@@ -2,6 +2,6 @@
     "appName": "Mastter Delivery - Entregador",
     "domain": "mastterdelivery",
     "color": "#e2542e",
-    "appType": "apk",
+    "appType": "bundle",
     "packageName": "mastterdelivery"
 }

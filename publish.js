@@ -6,6 +6,7 @@ import { execSync } from 'child_process';
 
 
 for (const app of appList) {
+    const basePath = process.cwd();
     execSync(`git checkout -- Appfile && git checkout -- Fastfile`, { cwd: `${basePath}/fastlane` }, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
@@ -18,9 +19,9 @@ for (const app of appList) {
             console.log(`stderr: ${stderr}`);
         };
     });
-    const basePath = process.cwd();
     const configPath = normalizePath(basePath + `/apps/${app}/config.json`);
     const { domain, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
+    console.log('INICIANDO A PUBLICAÇÃO DO APLICATIVO = ',packageName);
     const basePathOutput = `${basePath}/apps/${domain}`;
     const outputhMap = {
         'apk': `${basePathOutput}/entregador-2.0.0-${packageName}.apk`,
@@ -56,7 +57,6 @@ for (const app of appList) {
     });
 
     const command = laneMap[appType];
-    console.log(command);
     execSync(command, { cwd: basePath }, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
