@@ -10,8 +10,6 @@ export default class App {
         this.appType = appType;
         this.packageName = packageName;
         this.basePath = botRootPath();
-        this.oldPath = normalizePath(this.basePath + '/entregador/src/assets/images/nometransportadora');
-        this.newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${domain}`);
         this.isWindows = process.platform.includes('win');
     };
 
@@ -58,7 +56,7 @@ export default class App {
         };
     };
 
-    setPackagesName() {
+    setPackageName() {
         replace({
             regex: 'nomedopacote',
             replacement: this.packageName,
@@ -79,7 +77,6 @@ export default class App {
         const secondName = firstName.replace(/&/g, '&amp;');
         const thirdName = secondName.replace(/'/g, "\\'");
         const normalizedName = thirdName.replace(/\|/g, '\\|');
-
         replace({
             regex: "nomeaplicativo",
             replacement: normalizedName,
@@ -103,17 +100,9 @@ export default class App {
         });
     };
 
-    renamePaths() {
-        fs.renameSync(this.oldPath, this.newPath, function(err) {
-            if (err) {
-                console.log(err)
-            } else {
-                console.log("Successfully renamed the directory.")
-            };
-        });
+    renamePath() {
         const oldPath = normalizePath(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora')
         const newPath = normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}`);
-
         fs.renameSync(oldPath, newPath, function(err) {
             if (err) {
                 console.log(err)
@@ -124,6 +113,15 @@ export default class App {
     };
 
     setBanner() {
+        const oldPath = normalizePath(this.basePath + '/entregador/src/assets/images/nometransportadora');
+        const newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${this.domain}`);
+        fs.renameSync(oldPath, newPath, function(err) {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log("Successfully renamed the directory.")
+            };
+        });
         replace({
             regex: 'nometransportadora',
             replacement: this.domain,
@@ -146,7 +144,6 @@ export default class App {
         const gsPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/google-services.json`);
         const newgsPath = normalizePath(this.basePath + `/entregador/android/app/google-services.json`);
         const gsBuffer = fs.readFileSync(gsPath);
-        
         fs.writeFileSync(newgsPath, gsBuffer, function (err) {
             if (err) throw err;
             console.log('It\'s saved!');
@@ -188,10 +185,10 @@ export default class App {
     };
 
     makeApp() {
-        this.renamePaths();
+        this.renamePath();
         this.setSignatureKey();
         this.setLogo();
-        this.setPackagesName();
+        this.setPackageName();
         this.setAppName();
         this.setScreenMessage();
         this.setBanner();
