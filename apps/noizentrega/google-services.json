@@ -1371,6 +1371,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1060875073480:android:9f6142c7b64c549e5cf2fd",
+        "android_client_info": {
+          "package_name": "com.maisentregas.entregador.v2.g3logistica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJqDtBHR8yk5zChXdDUSVvPVHADTxGGZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1060875073480:android:2e8163e48401d4735cf2fd",
         "android_client_info": {
           "package_name": "com.maisentregas.entregador.v2.gosolucoes"
@@ -2502,6 +2531,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1060875073480:android:14c359bc854183ed5cf2fd",
+        "android_client_info": {
+          "package_name": "com.maisentregas.entregador.v2.noizentrega"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJqDtBHR8yk5zChXdDUSVvPVHADTxGGZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1060875073480:android:a7e1a6b4c6ee43005cf2fd",
         "android_client_info": {
           "package_name": "com.maisentregas.entregador.v2.novacobretudo"
@@ -3111,6 +3169,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1060875073480:android:dab96cfbaab42c365cf2fd",
+        "android_client_info": {
+          "package_name": "com.maisentregas.entregador.v2.sharklogistica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJqDtBHR8yk5zChXdDUSVvPVHADTxGGZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1060875073480:android:af0af52f527f1ddf5cf2fd",
         "android_client_info": {
           "package_name": "com.maisentregas.entregador.v2.skylinetransportes"
@@ -3665,6 +3752,35 @@
         "mobilesdk_app_id": "1:1060875073480:android:7cf8e14b6c89fa8d5cf2fd",
         "android_client_info": {
           "package_name": "com.maisentregas.entregador.v2.uniosentregas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJqDtBHR8yk5zChXdDUSVvPVHADTxGGZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060875073480-0iiq6cunjqierg8sk4bssf8ilca1uqlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060875073480:android:5387d5db60508f965cf2fd",
+        "android_client_info": {
+          "package_name": "com.maisentregas.entregador.v2.uniosfranca"
         }
       },
       "oauth_client": [

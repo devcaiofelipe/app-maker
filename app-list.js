@@ -74,13 +74,13 @@ export const appList = [
     'djexpress',
     'hortoboy',
     'rapidyexpress',
-    // 'g3logistica', sem info, nao pode publicar na loja
-    // 'bfstransportes', nao pode publicar na loja
-    // 'pecexpress', sem info, nao pode publicar na loja
-    // 'sharklogistica', sem info, nao pode publicar na loja
-    // 'mjmotoboy', sem info, nao pode publicar na loja
-    // 'noizentrega', sem info, nao pode publicar na loja
-    // 'andrademotoexpress', nao pode publicar na loja
-    // 'tomexpress', CLIENTE NAO ESTA USANDO NO MOMENTO, nao pode publicar na loja
-    // 'flpsp', nao pode publicar na loja
+    // Apps que ainda precisam ser publicados
+    'uniosfranca',
+    'sharklogistica',
+    'g3logistica',
+    'bfstransportes',
+    'sharklogistica',
+    'noizentrega',
+    'andrademotoexpress',
+    'flpsp',
 ];
