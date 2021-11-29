@@ -1,7 +1,7 @@
 {
   "appName": "Unios Franca - Entregador",
-  "domain": "uniosentregas",
+  "domain": "uniosfranca",
   "color": "#fe0000",
   "appType": "bundle",
-  "packageName": "uniosentregas"
+  "packageName": "uniosfranca"
 }
