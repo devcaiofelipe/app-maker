@@ -16,7 +16,6 @@ export const appList = [
     'coperboy',
     'dcomotoboy',
     'dedexexpress',
-    'dedexexpress',
     'deliverymanausexpress',
     'diferencialmotoexpress',
     'direcaoexpress',
