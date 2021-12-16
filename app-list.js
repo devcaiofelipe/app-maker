@@ -80,7 +80,6 @@ export const appList = [
     'vidaexpress',
     'vipfast',
     'zfdeliveryfast',
-    //Novos apps
     'algomaisexpress',
     'elaleva',
     'ewmotoboy',
