@@ -3,11 +3,11 @@ export const appList = [
     '2fexpress',
     'aclog',
     'altalogexpress',
-    'andrademotoexpress', // Precisa ser publicado
+    'andrademotoexpress',
     'araujoexpress',
     'beltraoexpress',
     'beraldomotoboy',
-    'bfstransportes', // Precisa ser publicado
+    'bfstransportes',
     'bluedelivery',
     'boydry',
     'callboy',
@@ -29,9 +29,9 @@ export const appList = [
     'f5delivery',
     'famotoboys',
     'flexpress',
-    'flpsp', // Precisa ser publicado
+    'flpsp',
     'fly',
-    'g3logistica', // Precisa ser publicado
+    'g3logistica',
     'gp46express',
     'gtexpress',
     'hortoboy',
@@ -43,13 +43,13 @@ export const appList = [
     'logligeiro',
     'logmoto',
     'maltalog',
-    'mastterdelivery',
+    'mastterdelivery', 
     'maualog',
     'mercadofeito',
     'motoboybelem',
     'mtlogg',
     'netboy',
-    'noizentrega', // Precisa ser publicado
+    'noizentrega',
     'novacobretudo',
     'packman',
     'pakot',
@@ -63,7 +63,7 @@ export const appList = [
     'schnell',
     'scriptport',
     'selectdelivery',
-    'sharklogistica', // Precisa ser publicado
+    'sharklogistica',
     'speedmotoboy',
     'speedmotofrete',
     'startentregas',
@@ -75,7 +75,7 @@ export const appList = [
     'tjlexpress',
     'trbexpressrj',
     'uniosentregas',
-    'uniosfranca', // Precisam ser publicado
+    'uniosfranca',
     'vasto',
     'vidaexpress',
     'vipfast',
