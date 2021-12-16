@@ -79,5 +79,17 @@ export const appList = [
     'vasto',
     'vidaexpress',
     'vipfast',
-    'zfdeliveryfast'
+    'zfdeliveryfast',
+    //Novos apps
+    'algomaisexpress',
+    'elaleva',
+    'ewmotoboy',
+    'levoou',
+    'loganexpress',
+    'meulog',
+    'oneupdeliver',
+    'sosentregasrapidas',
+    'amazonasboys',
+    'liderexpress',
+    'itaexpress',
 ];
