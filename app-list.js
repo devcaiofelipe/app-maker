@@ -90,5 +90,6 @@ export const appList = [
     'sosentregasrapidas',
     'amazonasboys',
     'liderexpress',
-    'itaexpress',
+    'itaexpress', // so falta esse
+    'mjmotoboy'
 ];
