@@ -5,10 +5,10 @@ import { botRootPath, normalizePath } from './src/utils.js'
 import fs from 'fs';
 
 
-for(const app of appList) {
+for(const domain of appList) {
     const basePath = botRootPath();
-    const configPath = normalizePath(basePath + `/bot/apps/${app}/config.json`);
-    const { appName, domain, color, appType, packageName }  = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
+    const configPath = normalizePath(basePath + `/bot/apps/${domain}/config.json`);
+    const { appName, color, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
 
     try {
         console.log(`Aplicativo ${appName} iniciado com sucesso, esse processo dura em média 5 minutos. Aguarde!`);

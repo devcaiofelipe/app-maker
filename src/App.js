@@ -10,7 +10,6 @@ export default class App {
         this.appType = appType;
         this.packageName = packageName;
         this.basePath = botRootPath();
-        this.isWindows = process.platform.includes('win');
     };
 
     setSignatureKey() {
@@ -22,11 +21,11 @@ export default class App {
             regex: typeMap[this.appType],
             replacement: '',
             paths: [
-                normalizePath(this.basePath + '/entregador/android/gradle.properties')  
+                normalizePath(this.basePath + '/entregador/android/gradle.properties')
             ],
             recursive: true,
             silent: true,
-        }); 
+        });
     };
     
     setLogo() {
@@ -88,7 +87,7 @@ export default class App {
         });
     };
 
-    setScreenMessage() {
+    setAppNameInLoginScreen() {
         replace({
             regex: "nomeaplicativo",
             replacement: this.appName,
@@ -101,13 +100,13 @@ export default class App {
     };
 
     renamePath() {
-        const oldPath = normalizePath(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora')
+        const oldPath = normalizePath(this.basePath + '/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/nometransportadora');
         const newPath = normalizePath(this.basePath + `/entregador/android/app/src/main/java/com/maisentregas/entregador/v2/${this.domain}`);
         fs.renameSync(oldPath, newPath, function(err) {
             if (err) {
-                console.log(err)
+                console.log(err);
             } else {
-                console.log("Successfully renamed the directory.")
+                console.log("Successfully renamed the directory.");
             };
         });
     };
@@ -117,9 +116,9 @@ export default class App {
         const newPath = normalizePath(this.basePath + `/entregador/src/assets/images/${this.domain}`);
         fs.renameSync(oldPath, newPath, function(err) {
             if (err) {
-                console.log(err)
+                console.log(err);
             } else {
-                console.log("Successfully renamed the directory.")
+                console.log("Successfully renamed the directory.");
             };
         });
         replace({
@@ -167,11 +166,13 @@ export default class App {
             'apk': 'apk',
             'bundle': 'aab',
         };
+
+        const isWindows = process.platform.includes('win');
         const pathToFind = normalizePath(`${this.basePath}/entregador/android/app/build/outputs/${this.appType}/release`);
         const fileList = recFindByExt(pathToFind, extensionMap[this.appType]);
         const filePath = fileList[0];
         const fileBuffer = fs.readFileSync(filePath);
-        const fullPath = this.isWindows ? filePath.split('\\') : filePath.split('/');
+        const fullPath = isWindows ? filePath.split('\\') : filePath.split('/');
         const fileName = fullPath[fullPath.length - 1];
         const outPutPath = normalizePath(`${this.basePath}/bot/apps/${this.domain}/${fileName}`);
         fs.writeFileSync(outPutPath, fileBuffer, function (err) {
@@ -190,7 +191,7 @@ export default class App {
         this.setLogo();
         this.setPackageName();
         this.setAppName();
-        this.setScreenMessage();
+        this.setAppNameInLoginScreen();
         this.setBanner();
         this.setGoogleServicesJson();
         this.setColor();
