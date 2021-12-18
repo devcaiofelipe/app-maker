@@ -1,7 +1,6 @@
 {
-  "appName": "Andrade Moto Express - Entregador",
-  "domain": "andrademotoexpress",
-  "color": "#e22d38",
-  "appType": "bundle",
-  "packageName": "andrademotoexpress"
+    "appName": "Andrade Moto Express - Entregador",
+    "color": "#e22d38",
+    "appType": "bundle",
+    "packageName": "andrademotoexpress"
 }

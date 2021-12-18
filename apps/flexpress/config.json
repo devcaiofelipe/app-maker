@@ -1,7 +1,6 @@
 {
-  "appName": "FL Express - Entregador",
-  "domain": "flexpress",
-  "color": "#080a02",
-  "appType": "apk",
-  "packageName": "flexpress"
+    "appName": "FL Express - Entregador",
+    "color": "#080a02",
+    "appType": "apk",
+    "packageName": "flexpress"
 }

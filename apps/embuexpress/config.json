@@ -1,7 +1,6 @@
 {
-  "appName": "Embu Express - Entregador",
-  "domain": "embuexpress",
-  "color": "#000000",
-  "appType": "apk",
-  "packageName": "embuexpress"
+    "appName": "Embu Express - Entregador",
+    "color": "#000000",
+    "appType": "apk",
+    "packageName": "embuexpress"
 }

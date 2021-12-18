@@ -1,7 +1,6 @@
 {
-  "appName": "Entregas Imediato - Entregador",
-  "domain": "entregasimediato",
-  "color": "#262062",
-  "appType": "apk",
-  "packageName": "entregasimediato"
+    "appName": "Entregas Imediato - Entregador",
+    "color": "#262062",
+    "appType": "apk",
+    "packageName": "entregasimediato"
 }

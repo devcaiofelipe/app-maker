@@ -1,7 +1,6 @@
 {
     "appName": "SOS Entregas - Entregador",
-    "domain": "sosentregasrapidas",
     "color": "#fdfe04",
     "appType": "bundle",
     "packageName": "sosentregasrapidas"
-  }
+}

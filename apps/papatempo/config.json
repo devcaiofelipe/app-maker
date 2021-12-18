@@ -1,7 +1,6 @@
 {
-  "appName": "Papatempo - Entregador",
-  "domain": "papatempo",
-  "color": "#594f46",
-  "appType": "apk",
-  "packageName": "papatempo"
+    "appName": "Papatempo - Entregador",
+    "color": "#594f46",
+    "appType": "apk",
+    "packageName": "papatempo"
 }

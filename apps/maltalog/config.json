@@ -1,7 +1,6 @@
 {
-  "appName": "Malta Log Express - Entregador",
-  "domain": "maltalog",
-  "color": "#bf1e2e",
-  "appType": "apk",
-  "packageName": "maltalog"
+    "appName": "Malta Log Express - Entregador",
+    "color": "#bf1e2e",
+    "appType": "apk",
+    "packageName": "maltalog"
 }

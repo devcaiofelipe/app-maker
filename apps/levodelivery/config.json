@@ -1,7 +1,6 @@
 {
-  "appName": "Levo Delivery - Entregador",
-  "domain": "levodelivery",
-  "color": "#38b6ff",
-  "appType": "bundle",
-  "packageName": "levodelivery"
+    "appName": "Levo Delivery - Entregador",
+    "color": "#38b6ff",
+    "appType": "bundle",
+    "packageName": "levodelivery"
 }

@@ -1,7 +1,6 @@
 {
-  "appName": "MauáLog - Entregador",
-  "domain": "maualog",
-  "color": "#751916",
-  "appType": "apk",
-  "packageName": "maualog"
+    "appName": "MauáLog - Entregador",
+    "color": "#751916",
+    "appType": "apk",
+    "packageName": "maualog"
 }

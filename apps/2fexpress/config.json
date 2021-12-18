@@ -1,7 +1,6 @@
 {
-  "appName": "2F Express - Entregador",
-  "domain": "2fexpress",
-  "color": "#ef3133",
-  "appType": "apk",
-  "packageName": "express2f"
+    "appName": "2F Express - Entregador",
+    "color": "#ef3133",
+    "appType": "apk",
+    "packageName": "express2f"
 }

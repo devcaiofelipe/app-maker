@@ -1,7 +1,6 @@
 {
-  "appName": "Sul Logística - Entregador",
-  "domain": "sullogistica",
-  "color": "#01acf4",
-  "appType": "apk",
-  "packageName": "sullogistica"
+    "appName": "Sul Logística - Entregador",
+    "color": "#01acf4",
+    "appType": "apk",
+    "packageName": "sullogistica"
 }

@@ -1,7 +1,6 @@
 {
-  "appName": "FLP Express - Entregador",
-  "domain": "flpsp",
-  "color": "#010374",
-  "appType": "bundle",
-  "packageName": "flpsp"
+    "appName": "FLP Express - Entregador",
+    "color": "#010374",
+    "appType": "bundle",
+    "packageName": "flpsp"
 }

@@ -1,7 +1,6 @@
 {
-  "appName": "Alta Log - Entregador",
-  "domain": "altalogexpress",
-  "color": "#24693f",
-  "appType": "bundle",
-  "packageName": "altalogexpress"
+    "appName": "Alta Log - Entregador",
+    "color": "#24693f",
+    "appType": "bundle",
+    "packageName": "altalogexpress"
 }

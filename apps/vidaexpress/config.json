@@ -1,7 +1,6 @@
 {
-  "appName": "Vida Express - Entregador",
-  "domain": "vidaexpress",
-  "color": "#149208",
-  "appType": "apk",
-  "packageName": "vidaexpress"
+    "appName": "Vida Express - Entregador",
+    "color": "#149208",
+    "appType": "apk",
+    "packageName": "vidaexpress"
 }

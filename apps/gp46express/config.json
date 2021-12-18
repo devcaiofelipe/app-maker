@@ -1,7 +1,6 @@
 {
-  "appName": "GP46 Express - Entregador",
-  "domain": "gp46express",
-  "color": "#ac0000",
-  "appType": "apk",
-  "packageName": "gp46express"
+    "appName": "GP46 Express - Entregador",
+    "color": "#ac0000",
+    "appType": "apk",
+    "packageName": "gp46express"
 }

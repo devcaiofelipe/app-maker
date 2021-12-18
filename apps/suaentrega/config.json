@@ -1,7 +1,6 @@
 {
-  "appName": "Sua Entrega - Entregador",
-  "domain": "suaentrega",
-  "color": "#ce8c16",
-  "appType": "apk",
-  "packageName": "suaentrega"
+    "appName": "Sua Entrega - Entregador",
+    "color": "#ce8c16",
+    "appType": "apk",
+    "packageName": "suaentrega"
 }

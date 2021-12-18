@@ -1,7 +1,6 @@
 {
-  "appName": "Dj Express - Entregador",
-  "domain": "djexpress",
-  "color": "#60ffa3",
-  "appType": "apk",
-  "packageName": "djexpress"
+    "appName": "Dj Express - Entregador",
+    "color": "#60ffa3",
+    "appType": "apk",
+    "packageName": "djexpress"
 }

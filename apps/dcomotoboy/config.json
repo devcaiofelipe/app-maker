@@ -1,7 +1,6 @@
 {
-  "appName": "DCO Motofrete - Entregador",
-  "domain": "dcomotoboy",
-  "color": "#333560",
-  "appType": "apk",
-  "packageName": "dcomotoboy"
+    "appName": "DCO Motofrete - Entregador",
+    "color": "#333560",
+    "appType": "apk",
+    "packageName": "dcomotoboy"
 }

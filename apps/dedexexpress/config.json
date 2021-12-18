@@ -1,7 +1,6 @@
 {
-  "appName": "Dedex Express - Entregador",
-  "domain": "dedexexpress",
-  "color": "#0e2461",
-  "appType": "apk",
-  "packageName": "dedexexpress"
+    "appName": "Dedex Express - Entregador",
+    "color": "#0e2461",
+    "appType": "apk",
+    "packageName": "dedexexpress"
 }

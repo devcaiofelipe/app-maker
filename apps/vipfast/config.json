@@ -1,7 +1,6 @@
 {
-  "appName": "Vipfast - Entregador",
-  "domain": "vipfast",
-  "color": "#03aff0",
-  "appType": "apk",
-  "packageName": "vipfast"
+    "appName": "Vipfast - Entregador",
+    "color": "#03aff0",
+    "appType": "apk",
+    "packageName": "vipfast"
 }

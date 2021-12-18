@@ -1,7 +1,6 @@
 {
-  "appName": "FA Motoboy - Entregador",
-  "domain": "famotoboys",
-  "color": "#00aeed",
-  "appType": "apk",
-  "packageName": "famotoboys"
+    "appName": "FA Motoboy - Entregador",
+    "color": "#00aeed",
+    "appType": "apk",
+    "packageName": "famotoboys"
 }

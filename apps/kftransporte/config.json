@@ -1,7 +1,6 @@
 {
-  "appName": "KF Transporte - Entregador",
-  "domain": "kftransporte",
-  "color": "#e20615",
-  "appType": "apk",
-  "packageName": "kftransporte"
+    "appName": "KF Transporte - Entregador",
+    "color": "#e20615",
+    "appType": "apk",
+    "packageName": "kftransporte"
 }

@@ -1,7 +1,6 @@
 {
-  "appName": "Mercado Feito - Entregador",
-  "domain": "mercadofeito",
-  "color": "#040400",
-  "appType": "bundle",
-  "packageName": "mercadofeito"
+    "appName": "Mercado Feito - Entregador",
+    "color": "#040400",
+    "appType": "bundle",
+    "packageName": "mercadofeito"
 }

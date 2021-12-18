@@ -1,7 +1,6 @@
 {
-  "appName": "GT Express - Entregador",
-  "domain": "gtexpress",
-  "color": "#3a9e3e",
-  "appType": "bundle",
-  "packageName": "gtexpress"
+    "appName": "GT Express - Entregador",
+    "color": "#3a9e3e",
+    "appType": "bundle",
+    "packageName": "gtexpress"
 }

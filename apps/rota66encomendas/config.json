@@ -1,7 +1,6 @@
 {
-  "appName": "Rota 66 - Entregador",
-  "domain": "rota66encomendas",
-  "color": "#f4050b",
-  "appType": "apk",
-  "packageName": "rota66encomendas"
+    "appName": "Rota 66 - Entregador",
+    "color": "#f4050b",
+    "appType": "apk",
+    "packageName": "rota66encomendas"
 }

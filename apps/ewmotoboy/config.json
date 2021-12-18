@@ -1,7 +1,6 @@
 {
     "appName": "EW Motoboy - Entregador",
-    "domain": "ewmotoboy",
     "color": "#cfcfcf",
     "appType": "bundle",
     "packageName": "ewmotoboy"
-  }
+}

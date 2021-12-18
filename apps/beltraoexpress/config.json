@@ -1,7 +1,6 @@
 {
-  "appName": "Beltrão Express - Entregador",
-  "domain": "beltraoexpress",
-  "color": "#292927",
-  "appType": "bundle",
-  "packageName": "beltraoexpress"
+    "appName": "Beltrão Express - Entregador",
+    "color": "#292927",
+    "appType": "bundle",
+    "packageName": "beltraoexpress"
 }

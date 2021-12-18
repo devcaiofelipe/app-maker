@@ -1,7 +1,6 @@
 {
-  "appName": "Blue Delivery - Entregador",
-  "domain": "bluedelivery",
-  "color": "#006599",
-  "appType": "apk",
-  "packageName": "bluedelivery"
+    "appName": "Blue Delivery - Entregador",
+    "color": "#006599",
+    "appType": "apk",
+    "packageName": "bluedelivery"
 }

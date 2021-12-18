@@ -1,7 +1,6 @@
 {
-  "appName": "Hortoboy - Entregador",
-  "domain": "hortoboy",
-  "color": "#ee1d23",
-  "appType": "bundle",
-  "packageName": "hortoboy"
+    "appName": "Hortoboy - Entregador",
+    "color": "#ee1d23",
+    "appType": "bundle",
+    "packageName": "hortoboy"
 }

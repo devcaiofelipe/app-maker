@@ -1,7 +1,6 @@
 {
-  "appName": "Lijet - Entregador",
-  "domain": "lijet",
-  "color": "#ed3237",
-  "appType": "apk",
-  "packageName": "lijet"
+    "appName": "Lijet - Entregador",
+    "color": "#ed3237",
+    "appType": "apk",
+    "packageName": "lijet"
 }

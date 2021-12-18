@@ -1,7 +1,6 @@
 {
-  "appName": "Pakot Express - Entregador",
-  "domain": "pakot",
-  "color": "#0140f0",
-  "appType": "apk",
-  "packageName": "pakot"
+    "appName": "Pakot Express - Entregador",
+    "color": "#0140f0",
+    "appType": "apk",
+    "packageName": "pakot"
 }

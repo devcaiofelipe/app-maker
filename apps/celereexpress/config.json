@@ -1,7 +1,6 @@
 {
-  "appName": "Celere - Entregador",
-  "domain": "celereexpress",
-  "color": "#1594bd",
-  "appType": "apk",
-  "packageName": "celereexpress"
+    "appName": "Celere - Entregador",
+    "color": "#1594bd",
+    "appType": "apk",
+    "packageName": "celereexpress"
 }

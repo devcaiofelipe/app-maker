@@ -1,7 +1,6 @@
 {
-  "appName": "Direção Express - Entregador",
-  "domain": "direcaoexpress",
-  "color": "#af7d39",
-  "appType": "apk",
-  "packageName": "direcaoexpress"
+    "appName": "Direção Express - Entregador",
+    "color": "#af7d39",
+    "appType": "apk",
+    "packageName": "direcaoexpress"
 }

@@ -1,7 +1,6 @@
 {
     "appName": "One Up Deliver - Entregador",
-    "domain": "oneupdeliver",
     "color": "#ffbd00",
     "appType": "bundle",
     "packageName": "oneupdeliver"
-  }
+}

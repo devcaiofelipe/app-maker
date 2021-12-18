@@ -1,7 +1,6 @@
 {
-  "appName": "Ice Boys - Entregador",
-  "domain": "iceboys",
-  "color": "#0183d8",
-  "appType": "apk",
-  "packageName": "iceboys"
+    "appName": "Ice Boys - Entregador",
+    "color": "#0183d8",
+    "appType": "apk",
+    "packageName": "iceboys"
 }

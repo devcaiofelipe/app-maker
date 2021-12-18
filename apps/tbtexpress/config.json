@@ -1,7 +1,6 @@
 {
-  "appName": "TBT Express - Entregador",
-  "domain": "tbtexpress",
-  "color": "#ca3231",
-  "appType": "apk",
-  "packageName": "tbt_express"
+    "appName": "TBT Express - Entregador",
+    "color": "#ca3231",
+    "appType": "apk",
+    "packageName": "tbt_express"
 }

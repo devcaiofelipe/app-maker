@@ -1,7 +1,6 @@
 {
-  "appName": "Nova Cobretudo - Entregador",
-  "domain": "novacobretudo",
-  "color": "#356490",
-  "appType": "apk",
-  "packageName": "novacobretudo"
+    "appName": "Nova Cobretudo - Entregador",
+    "color": "#356490",
+    "appType": "apk",
+    "packageName": "novacobretudo"
 }

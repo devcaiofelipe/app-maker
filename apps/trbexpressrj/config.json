@@ -1,7 +1,6 @@
 {
-  "appName": "TRB Express RJ - Entregador",
-  "domain": "trbexpressrj",
-  "color": "#000000",
-  "appType": "apk",
-  "packageName": "trbexpressrj"
+    "appName": "TRB Express RJ - Entregador",
+    "color": "#000000",
+    "appType": "apk",
+    "packageName": "trbexpressrj"
 }

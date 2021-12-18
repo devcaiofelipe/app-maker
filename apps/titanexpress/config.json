@@ -1,7 +1,6 @@
 {
-  "appName": "Titan Express - Entregador",
-  "domain": "titanexpress",
-  "color": "#e93233",
-  "appType": "apk",
-  "packageName": "titanexpress"
+    "appName": "Titan Express - Entregador",
+    "color": "#e93233",
+    "appType": "apk",
+    "packageName": "titanexpress"
 }

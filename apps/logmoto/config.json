@@ -1,7 +1,6 @@
 {
-  "appName": "LogMoto - Entregador",
-  "domain": "logmoto",
-  "color": "#eb3237",
-  "appType": "apk",
-  "packageName": "logmoto"
+    "appName": "LogMoto - Entregador",
+    "color": "#eb3237",
+    "appType": "apk",
+    "packageName": "logmoto"
 }

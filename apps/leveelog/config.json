@@ -1,7 +1,6 @@
 {
-  "appName": "Levee Log - Entregador",
-  "domain": "leveelog",
-  "color": "#33ff9d",
-  "appType": "bundle",
-  "packageName": "leveelog"
+    "appName": "Levee Log - Entregador",
+    "color": "#33ff9d",
+    "appType": "bundle",
+    "packageName": "leveelog"
 }

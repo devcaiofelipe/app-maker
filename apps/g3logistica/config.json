@@ -1,7 +1,6 @@
 {
-  "appName": "G3 Logística - Entregador",
-  "domain": "g3logistica",
-  "color": "#8743fa",
-  "appType": "bundle",
-  "packageName": "g3logistica"
+    "appName": "G3 Logística - Entregador",
+    "color": "#8743fa",
+    "appType": "bundle",
+    "packageName": "g3logistica"
 }

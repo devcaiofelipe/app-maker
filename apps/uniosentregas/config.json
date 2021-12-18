@@ -1,7 +1,6 @@
 {
-  "appName": "Unios - Entregadores",
-  "domain": "uniosentregas",
-  "color": "#000000",
-  "appType": "bundle",
-  "packageName": "uniosentregas"
+    "appName": "Unios - Entregadores",
+    "color": "#000000",
+    "appType": "bundle",
+    "packageName": "uniosentregas"
 }

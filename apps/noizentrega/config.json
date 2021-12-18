@@ -1,7 +1,6 @@
 {
-  "appName": "Noiz Entrega - Entregador",
-  "domain": "noizentrega",
-  "color": "#fe5200",
-  "appType": "bundle",
-  "packageName": "noizentrega"
+    "appName": "Noiz Entrega - Entregador",
+    "color": "#fe5200",
+    "appType": "bundle",
+    "packageName": "noizentrega"
 }

@@ -1,7 +1,6 @@
 {
     "appName": "Meulog Express - Entregador",
-    "domain": "meulog",
     "color": "#00A7EB",
     "appType": "bundle",
     "packageName": "meulog"
-  }
+}

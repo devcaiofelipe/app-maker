@@ -1,7 +1,6 @@
 {
-  "appName": "NETBOY - Entregador",
-  "domain": "netboy",
-  "color": "#ec1a25",
-  "appType": "apk",
-  "packageName": "netboy"
+    "appName": "NETBOY - Entregador",
+    "color": "#ec1a25",
+    "appType": "apk",
+    "packageName": "netboy"
 }

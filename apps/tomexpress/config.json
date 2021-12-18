@@ -1,7 +1,6 @@
 {
-  "appName": "TOM Express - Entregador",
-  "domain": "tomexpress",
-  "color": "#045dbe",
-  "appType": "apk",
-  "packageName": "tomexpress"
+    "appName": "TOM Express - Entregador",
+    "color": "#045dbe",
+    "appType": "apk",
+    "packageName": "tomexpress"
 }

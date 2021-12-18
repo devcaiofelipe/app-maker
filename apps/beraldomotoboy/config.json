@@ -1,7 +1,6 @@
 {
-  "appName": "Beraldo Motoboy - Colaborador",
-  "domain": "beraldomotoboy",
-  "color": "#f38635",
-  "appType": "bundle",
-  "packageName": "beraldomotoboy"
+    "appName": "Beraldo Motoboy - Colaborador",
+    "color": "#f38635",
+    "appType": "bundle",
+    "packageName": "beraldomotoboy"
 }

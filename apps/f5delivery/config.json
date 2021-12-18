@@ -1,7 +1,6 @@
 {
-  "appName": "F5 Delivery - Entregador",
-  "domain": "f5delivery",
-  "color": "#000000",
-  "appType": "apk",
-  "packageName": "f5delivery"
+    "appName": "F5 Delivery - Entregador",
+    "color": "#000000",
+    "appType": "apk",
+    "packageName": "f5delivery"
 }

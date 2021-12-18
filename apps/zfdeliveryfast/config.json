@@ -1,7 +1,6 @@
 {
-  "appName": "Z&F Delivery Fast - Entregador",
-  "domain": "zfdeliveryfast",
-  "color": "#000000",
-  "appType": "bundle",
-  "packageName": "zfdeliveryfast"
+    "appName": "Z&F Delivery Fast - Entregador",
+    "color": "#000000",
+    "appType": "bundle",
+    "packageName": "zfdeliveryfast"
 }

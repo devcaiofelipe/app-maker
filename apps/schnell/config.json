@@ -1,7 +1,6 @@
 {
-  "appName": "Schnell - Entregador",
-  "domain": "schnell",
-  "color": "#bbffd1",
-  "appType": "apk",
-  "packageName": "schnell"
+    "appName": "Schnell - Entregador",
+    "color": "#bbffd1",
+    "appType": "apk",
+    "packageName": "schnell"
 }

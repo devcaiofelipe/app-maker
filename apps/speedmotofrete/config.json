@@ -1,7 +1,6 @@
 {
-  "appName": "Speed Delivery - Entregador",
-  "domain": "speedmotofrete",
-  "color": "#cb2725",
-  "appType": "bundle",
-  "packageName": "speedmotofrete"
+    "appName": "Speed Delivery - Entregador",
+    "color": "#cb2725",
+    "appType": "bundle",
+    "packageName": "speedmotofrete"
 }

@@ -1,7 +1,6 @@
 {
     "appName": "Elaleva - Entregador",
-    "domain": "elaleva",
     "color": "#CAE5F6",
     "appType": "bundle",
     "packageName": "elaleva"
-  }
+}

@@ -1,7 +1,6 @@
 {
-  "appName": "BOYDRY Express - Entregador",
-  "domain": "boydry",
-  "color": "#ba4a00",
-  "appType": "apk",
-  "packageName": "boydryexpress"
+    "appName": "BOYDRY Express - Entregador",
+    "color": "#ba4a00",
+    "appType": "apk",
+    "packageName": "boydryexpress"
 }

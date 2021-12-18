@@ -1,7 +1,6 @@
 {
-  "appName": "Log Ligeiro - Entregador",
-  "domain": "logligeiro",
-  "color": "#e6663d",
-  "appType": "bundle",
-  "packageName": "logligeiro"
+    "appName": "Log Ligeiro - Entregador",
+    "color": "#e6663d",
+    "appType": "bundle",
+    "packageName": "logligeiro"
 }

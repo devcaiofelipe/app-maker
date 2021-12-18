@@ -1,7 +1,6 @@
 {
-  "appName": "Surf's Entregas - Entregador",
-  "domain": "surfsentregas",
-  "color": "#231f21",
-  "appType": "apk",
-  "packageName": "surfsentregas"
+    "appName": "Surf's Entregas - Entregador",
+    "color": "#231f21",
+    "appType": "apk",
+    "packageName": "surfsentregas"
 }

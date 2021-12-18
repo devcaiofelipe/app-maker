@@ -1,7 +1,6 @@
 {
-  "appName": "Vasto - Entregador",
-  "domain": "vasto",
-  "color": "#1118a9",
-  "appType": "bundle",
-  "packageName": "vasto"
+    "appName": "Vasto - Entregador",
+    "color": "#1118a9",
+    "appType": "bundle",
+    "packageName": "vasto"
 }

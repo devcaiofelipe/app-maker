@@ -1,7 +1,6 @@
 {
-  "appName": "Ramos Motoboy - Entregador",
-  "domain": "ramosserviceexpress",
-  "color": "#df3132",
-  "appType": "bundle",
-  "packageName": "ramosserviceexpress"
+    "appName": "Ramos Motoboy - Entregador",
+    "color": "#df3132",
+    "appType": "bundle",
+    "packageName": "ramosserviceexpress"
 }

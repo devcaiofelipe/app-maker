@@ -1,7 +1,6 @@
 {
     "appName": "Logan Express - Entregador",
-    "domain": "loganexpress",
     "color": "#F8FF04",
     "appType": "bundle",
     "packageName": "loganexpress"
-  }
+}

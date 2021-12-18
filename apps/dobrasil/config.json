@@ -1,7 +1,6 @@
 {
-  "appName": "Motoboys do Brasil - Entregador",
-  "domain": "dobrasil",
-  "color": "#007744",
-  "appType": "apk",
-  "packageName": "dobrasil"
+    "appName": "Motoboys do Brasil - Entregador",
+    "color": "#007744",
+    "appType": "apk",
+    "packageName": "dobrasil"
 }

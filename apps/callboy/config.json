@@ -1,7 +1,6 @@
 {
-  "appName": "Callboy - Entregador",
-  "domain": "callboy",
-  "color": "#fe5a00",
-  "appType": "apk",
-  "packageName": "callboy"
+    "appName": "Callboy - Entregador",
+    "color": "#fe5a00",
+    "appType": "apk",
+    "packageName": "callboy"
 }

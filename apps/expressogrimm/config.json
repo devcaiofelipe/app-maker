@@ -1,7 +1,6 @@
 {
-  "appName": "Expresso Grimm - Entregador",
-  "domain": "expressogrimm",
-  "color": "#0137e2",
-  "appType": "bundle",
-  "packageName": "expressogrimm"
+    "appName": "Expresso Grimm - Entregador",
+    "color": "#0137e2",
+    "appType": "bundle",
+    "packageName": "expressogrimm"
 }

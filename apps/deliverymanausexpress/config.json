@@ -1,7 +1,6 @@
 {
-  "appName": "Delivery Manaus - Entregador",
-  "domain": "deliverymanausexpress",
-  "color": "#c4942c",
-  "appType": "apk",
-  "packageName": "deliverymanausexpress"
+    "appName": "Delivery Manaus - Entregador",
+    "color": "#c4942c",
+    "appType": "apk",
+    "packageName": "deliverymanausexpress"
 }

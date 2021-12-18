@@ -1,7 +1,6 @@
 {
-  "appName": "Araújo Express - Entregador",
-  "domain": "araujoexpress",
-  "color": "#9a0000",
-  "appType": "apk",
-  "packageName": "araujoexpress"
+    "appName": "Araújo Express - Entregador",
+    "color": "#9a0000",
+    "appType": "apk",
+    "packageName": "araujoexpress"
 }
