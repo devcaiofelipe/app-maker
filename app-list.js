@@ -62,6 +62,7 @@ export const appList = [
     'netboy',
     'noizentrega',
     'novacobretudo',
+    'novalog',
     'oneupdeliver',
     'packman',
     'pakot',
