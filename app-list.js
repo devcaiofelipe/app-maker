@@ -5,6 +5,7 @@ export const appList = [
     'algomaisexpress',
     'altalogexpress',
     'amazonasboys',
+    'andradeexpressboy',
     'andrademotoexpress',
     'araujoexpress',
     'beltraoexpress',
@@ -35,6 +36,7 @@ export const appList = [
     'flexpress',
     'flpsp',
     'fly',
+    'fooddelivery',
     'g3logistica',
     'gp46express',
     'gtexpress',
@@ -72,6 +74,7 @@ export const appList = [
     'racingexpress',
     'ramosserviceexpress',
     'rapidyexpress',
+    'relampagoexpress',
     'rota66encomendas',
     'schnell',
     'scriptport',
@@ -95,4 +98,5 @@ export const appList = [
     'vidaexpress',
     'vipfast',
     'zfdeliveryfast',
+    'zapdelivery'
 ];
