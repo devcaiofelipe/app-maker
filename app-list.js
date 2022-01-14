@@ -1,5 +1,6 @@
 // Lista de todos os aplicativos que você quer que seja gerado..
 export const appList = [
+    '4habitos',
     '2fexpress',
     'aclog',
     'algomaisexpress',
@@ -24,6 +25,7 @@ export const appList = [
     'direcaoexpress',
     'disktudo',
     'djexpress',
+    'dnicolaentregas',
     'dobrasil',
     'eduardomotoboys',
     'elaleva',
@@ -63,6 +65,7 @@ export const appList = [
     'mtlogg',
     'netboy',
     'noizentrega',
+    'nortesulexpress',
     'novacobretudo',
     'novalog',
     'oneupdeliver',
@@ -98,5 +101,5 @@ export const appList = [
     'vidaexpress',
     'vipfast',
     'zfdeliveryfast',
-    'zapdelivery'
+    'zapdelivery',
 ];
