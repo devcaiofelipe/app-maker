@@ -100,6 +100,7 @@ export const appList = [
     'uniosentregas',
     'uniosfranca',
     'vasto',
+    'velozcoletaeentrega',
     'vidaexpress',
     'vipfast',
     'zfdeliveryfast',
