@@ -2,6 +2,7 @@
 export const appList = [
     '4habitos',
     '2fexpress',
+    '3mexpress',
     'aclog',
     'algomaisexpress',
     'altalogexpress',
@@ -77,6 +78,7 @@ export const appList = [
     'papatempo',
     'postarlog',
     'racingexpress',
+    'raglogistica',
     'ramosserviceexpress',
     'rapidyexpress',
     'relampagoexpress',
@@ -105,4 +107,5 @@ export const appList = [
     'vipfast',
     'zfdeliveryfast',
     'zapdelivery',
+    'zaplog'
 ];
