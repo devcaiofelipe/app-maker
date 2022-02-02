@@ -21,7 +21,7 @@ for (const app of appList) {
     });
     const configPath = normalizePath(basePath + `/apps/${app}/config.json`);
     const { appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
-    console.log('INICIANDO A PUBLICAÇÃO DO APLICATIVO = ',packageName);
+    console.log('INICIANDO A PUBLICAÇÃO DO APLICATIVO =', packageName);
     const basePathOutput = `${basePath}/apps/${app}`;
     const outputhMap = {
         'apk': `${basePathOutput}/entregador-2.0.11-${packageName}.apk`,
@@ -35,8 +35,6 @@ for (const app of appList) {
         'apk': 'fastlane apk',
         'bundle': 'fastlane aab'
     };
-    console.log('teste', outputhMap[appType]);
-
     replace({
         regex: 'nomedopacote',
         replacement: packageName,
@@ -46,7 +44,6 @@ for (const app of appList) {
         recursive: false,
         silent: false,
     });
-    
     replace({
         regex: typeMap[appType],
         replacement: outputhMap[appType],
@@ -56,7 +53,6 @@ for (const app of appList) {
         recursive: false,
         silent: false,
     });
-
     const command = laneMap[appType];
     execSync(command, { cwd: basePath }, (error, stdout, stderr) => {
         if (error) {
@@ -70,7 +66,6 @@ for (const app of appList) {
             console.log(`stderr: ${stderr}`);
         };
     });
-
     execSync(`git checkout -- Appfile && git checkout -- Fastfile`, { cwd: `${basePath}/fastlane` }, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);

@@ -1,7 +1,6 @@
 import { execSync } from 'child_process';
 import { botRootPath, normalizePath } from './utils.js';
 
-
 export default class Terminal {
     static gradlewClean() {
         execSync(`./gradlew clean`, { cwd: normalizePath(`${botRootPath()}/entregador/android`)}, (error, stdout, stderr) => {
