@@ -20,12 +20,12 @@ for (const app of appList) {
         };
     });
     const configPath = normalizePath(basePath + `/apps/${app}/config.json`);
-    const { domain, appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
+    const { appType, packageName } = JSON.parse(fs.readFileSync(configPath, 'UTF-8'));
     console.log('INICIANDO A PUBLICAÇÃO DO APLICATIVO = ',packageName);
-    const basePathOutput = `${basePath}/apps/${domain}`;
+    const basePathOutput = `${basePath}/apps/${app}`;
     const outputhMap = {
-        'apk': `${basePathOutput}/entregador-2.0.0-${packageName}.apk`,
-        'bundle': `${basePathOutput}/entregador-2.0.0-release.aab`
+        'apk': `${basePathOutput}/entregador-2.0.11-${packageName}.apk`,
+        'bundle': `${basePathOutput}/entregador-2.0.11-release.aab`
     };
     const typeMap = {
         'apk': 'apkpath',
@@ -35,6 +35,7 @@ for (const app of appList) {
         'apk': 'fastlane apk',
         'bundle': 'fastlane aab'
     };
+    console.log('teste', outputhMap[appType]);
 
     replace({
         regex: 'nomedopacote',
@@ -45,7 +46,7 @@ for (const app of appList) {
         recursive: false,
         silent: false,
     });
-
+    
     replace({
         regex: typeMap[appType],
         replacement: outputhMap[appType],

@@ -1,8 +1,8 @@
 // Lista de todos os aplicativos que você quer que seja gerado..
 export const appList = [
-    '4habitos',
     '2fexpress',
     '3mexpress',
+    '4habitos',
     'aclog',
     'agilizemais',
     'algomaisexpress',
@@ -49,7 +49,6 @@ export const appList = [
     'gtexpress',
     'hortoboy',
     'iceboys',
-    'itaexpress',
     'itaexpress',
     'kftransporte',
     'leveelog',
