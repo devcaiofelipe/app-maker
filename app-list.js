@@ -26,6 +26,7 @@ export const appList = [
     'deliverymanausexpress',
     'diferencialmotoexpress',
     'direcaoexpress',
+    'diskmotosvilavelha',
     'disktudo',
     'djexpress',
     'dnicolaentregas',
