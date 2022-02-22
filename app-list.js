@@ -71,6 +71,7 @@ export const appList = [
     'meulog',
     'mjmotoboy',
     'motoboybelem',
+    'motofreteentregas',
     'mtlogg',
     'netboy',
     'noizentrega',
