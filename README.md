@@ -5,4 +5,4 @@
 
 ## Tecnologias usadas
 - NodeJS - usado para automação do processo de geração e alteração dos conteúdos dinâmicos.
-- Fastlane - usado para o processo de publicação dos aplicativos gerados na google play store.
+- FastLane - usado para o processo de publicação dos aplicativos gerados na google play store.
