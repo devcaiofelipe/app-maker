@@ -90,6 +90,7 @@ export const appList = [
     'ramosserviceexpress',
     'rapidyexpress',
     'relampagoexpress',
+    'rocketboys',
     'rota66encomendas',
     'rzdassessorialogistica',
     'schnell',
@@ -117,6 +118,7 @@ export const appList = [
     'velozcoletaeentrega',
     'vidaexpress',
     'vipfast',
+    'vlogdelivery',
     'zfdeliveryfast',
     'zapdelivery',
     'zaplog'
