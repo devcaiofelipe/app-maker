@@ -44,6 +44,7 @@ export const appList = [
     'f5delivery',
     'famotoboys',
     'fast',
+    'fatorx',
     'fenixexpress',
     'finotelliexpress',
     'flexpress',
