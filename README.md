@@ -1,7 +1,7 @@
 # Script de automação
 
 ## Finalidade deste projeto?
-- Este projeto visa automatizar o processo de geração e publicação de aplicativos na playstore da empresa que trabalho atualmente.
+- Este projeto visa automatizar o processo de geração e publicação de aplicativos na playstore.
 
 ## Tecnologias usadas
 - NodeJS - usado para automação do processo de geração e alteração dos conteúdos dinâmicos.
