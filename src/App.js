@@ -55,6 +55,33 @@ export default class App {
         };
     };
 
+    setLogoRound() {
+      replace({
+          regex: 'nometransportadora',
+          replacement: this.domain,
+          paths: [
+              normalizePath(this.basePath + '/entregador/android/app/src/main/AndroidManifest.xml'),
+          ],
+          recursive: false,
+          silent: false,
+      });
+      const paths = [
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/drawable/logo_${this.domain}_round.png`),
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-hdpi/logo_${this.domain}_round.png`),
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-mdpi/logo_${this.domain}_round.png`),
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xhdpi/logo_${this.domain}_round.png`),
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xxhdpi/logo_${this.domain}_round.png`),
+          normalizePath(this.basePath + `/entregador/android/app/src/main/res/mipmap-xxxhdpi/logo_${this.domain}_round.png`)
+      ];
+      for(const path of paths) {
+          const fileBuffer = fs.readFileSync(`${this.basePath}/bot/apps/${this.domain}/logo_${this.domain}_round.png`);
+          fs.writeFileSync(path, fileBuffer, function (err) {
+              if (err) throw err;
+              console.log('It\'s saved!');
+          });
+        };
+    };
+
     setPackageName() {
         replace({
             regex: 'nomedopacote',
@@ -189,6 +216,7 @@ export default class App {
         this.renamePath();
         this.setSignatureKey();
         this.setLogo();
+        this.setLogoRound();
         this.setPackageName();
         this.setAppName();
         this.setAppNameInLoginScreen();
