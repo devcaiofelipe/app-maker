@@ -56,7 +56,7 @@ export const appList = [
     'grsdelivery',
     'gtexpress',
     'hortoboy',
-    'i9entregas',
+    'i9maisentregas',
     'iceboys',
     'itaexpress',
     'kftransporte',
